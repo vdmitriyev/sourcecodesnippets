@@ -1,0 +1,17 @@
+{
+	"variable1": {
+		"value" : 1.0,
+		"type"  : "float",
+		"description": "Just a dummy variable"
+	},
+	"variable2": {
+		"value" : [1.0 2.0 3.0 4.0],
+		"type"  : "array",
+		"description": "Just a dummy variables in one single array"
+	},
+	"variable3": {
+		"value" : "RandomString",
+		"type"  : "string",
+		"description": "Just a dummy variable, type string"
+	}
+}
