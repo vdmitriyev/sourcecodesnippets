@@ -4,7 +4,10 @@ Own collection of source code code snippets for various programming languages. S
 
 ### Collection
 
+* [bat](bat)
 * [octave](octave)
+* [vba](vba)
+
 
 ### Author
 
