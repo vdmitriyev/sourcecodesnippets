@@ -4,14 +4,19 @@ Collection of various VBA scripts. Some additional MS Office ticks can be found 
 
 ### Collection Description
 
-* [test-checker.bat](test-checker.bat)
-	- Useful for the program testing purposes, adapted from programming competitions
-* [copy-iteratively.bat](copy-iteratively.bat)
-	- Recursively iterates folder and copies all files from it into single folder
+* [checkspelling.vb](checkspelling.vb)
+	- Change languages spell checker configurations to other language (for instance - English)
+* [exportpngemf.vb](exportpngemf.vb)
+	- Exporting MS Visio diagrams to the PNG or EMF (one or all documents)
+* [progressbar.vb]()
+	- Drawing a dynamic progressbar on the bottom of the MS Power Point presentation
+* [PPTtoPDFwithAnimationsPart1](PPTtoPDFwithAnimationsPart1.vb) || [PPTtoPDFwithAnimationsPart2](PPTtoPDFwithAnimationsPart2.vb)
+	- Expiring MS Power Point slides to a PDF file with animations. More can be found [here](http://vdmitriyev.github.io/blog/how-to-export-ms-power-point-slides-to-the-pdf-file-and-keep-animations.html).	
 
 ### Credits
 
-* 
+* [Neil Mitchell's - Creating a PDF from Powerpoint WITH Custom Animations](http://neilmitchell.blogspot.de/2007/11/creating-pdf-from-powerpoint-with.html)
+* All people helping around on the internet
 
 ### Author
 
