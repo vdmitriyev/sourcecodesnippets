@@ -95,7 +95,8 @@ class DirectoryHelper():
         up_dir = cur_dir[:cur_dir.rfind('\\')] + '\\'
         return up_dir
 
-    def save_file(self, file_name, text, encoding='utf-8'):
+    @staticmethod
+    def save_file(file_name, text, encoding='utf-8'):
         """
             (obj, str, str, str) -> None
 
@@ -105,7 +106,8 @@ class DirectoryHelper():
         _file.write(text)
         _file.close()
 
-    def save_img_file(self, file_name, img, ):
+    @staticmethod
+    def save_img_file(file_name, img, ):
         """
             (obj,str,str) -> None
 
@@ -118,7 +120,8 @@ class DirectoryHelper():
         # with open(file_name, 'w') as content_file:
         #     content = content_file.write(text)
 
-    def read_file(self, file_name):
+    @staticmethod
+    def read_file(file_name):
         """
             (obj, str) -> (str)
 
@@ -128,7 +131,8 @@ class DirectoryHelper():
             file_content = file_input.read()
         return file_content
 
-    def read_file_utf8(self, file_name):
+    @staticmethod
+    def read_file_utf8(file_name):
         """
             (obj, str) -> (str)
 
@@ -140,7 +144,8 @@ class DirectoryHelper():
 
         return file_content
 
-    def gen_file_name(self, extention='.html', name=None):
+    @staticmethod
+    def gen_file_name(extention='.html', name=None):
         """
             (obj, str) -> (str)
 
