@@ -1,0 +1,45 @@
+create database a9a;
+use a9a;
+
+delete jar /root/scripts/hive/hivemall-with-dependencies.jar;
+add jar /root/scripts/hive/hivemall-with-dependencies.jar;
+
+source /root/scripts/hive/define-all.hive;
+
+CREATE EXTERNAL TABLE a9atrain (
+  rowid int,
+  label float,
+  features ARRAY<STRING>
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' COLLECTION ITEMS TERMINATED BY "," STORED AS TEXTFILE LOCATION '/data/a9a/train';
+
+
+CREATE EXTERNAL TABLE a9atest (
+  rowid int, 
+  label float,
+  features ARRAY<STRING>
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' COLLECTION ITEMS TERMINATED BY "," STORED AS TEXTFILE LOCATION '/data/a9a/test';
+
+
+create table a9atrain_exploded as
+select 
+  rowid,
+  label, 
+  cast(split(feature,":")[0] as int) feature,
+  cast(split(feature,":")[1] as float) as value
+  -- hivemall v0.3.1 or later
+  -- extract_feature(feature) as feature,
+  -- extract_weight(feature) as value
+from 
+  a9atrain LATERAL VIEW explode(addBias(features)) t AS feature;
+  
+create table a9atest_exploded as
+select 
+  rowid,
+  label,
+  cast(split(feature,":")[0] as int) as feature,
+  cast(split(feature,":")[1] as float) as value
+  -- hivemall v0.3.1 or later
+  -- extract_feature(feature) as feature,
+  -- extract_weight(feature) as value
+from 
+  a9atest LATERAL VIEW explode(addBias(features)) t AS feature;

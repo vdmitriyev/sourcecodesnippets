@@ -1,0 +1,26 @@
+use a9a;
+
+delete jar /root/scripts/hive/hivemall-with-dependencies.jar;
+add jar /root/scripts/hive/hivemall-with-dependencies.jar;
+
+source /root/scripts/hive/define-all.hive;
+
+select count(1) from a9atrain;
+-- set total_steps ideally be "count(1) / #map tasks"
+set hivevar:total_steps=32561;
+
+select count(1) from a9atest;
+set hivevar:num_test_instances=16281;
+
+create table a9a_logreg_model01 
+as
+select 
+ cast(feature as int) as feature,
+ avg(weight) as weight
+from 
+ (select 
+     logress(addBias(features),label,"-total_steps ${total_steps}") as (feature,weight)
+  from 
+     a9atrain
+ ) t 
+group by feature;
