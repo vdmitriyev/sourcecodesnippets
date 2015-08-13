@@ -92,9 +92,57 @@ select
 from
   a9atest LATERAL VIEW explode(addBias(features)) t AS feature;
 ```
-* Build your model
+* Build your model with logistic regression
+```
+select count(1) from a9atrain;
+-- set total_steps ideally be "count(1) / #map tasks"
+set hivevar:total_steps=32561;
 
+select count(1) from a9atest;
+set hivevar:num_test_instances=16281;
 
+create table a9a_logreg_model01
+as
+select
+ cast(feature as int) as feature,
+ avg(weight) as weight
+from
+ (select
+     logress(addBias(features),label,"-total_steps ${total_steps}") as (feature,weight)
+  from
+     a9atrain
+ ) t
+group by feature;
+```
+* Make predictions with model created above
+```
+create or replace view a9a_logreg_model01_predict
+as
+select
+  t.rowid,
+  sigmoid(sum(m.weight * t.value)) as prob,
+  CAST((case when sigmoid(sum(m.weight * t.value)) >= 0.5 then 1.0 else 0.0 end) as FLOAT) as label
+from
+  a9atest_exploded t LEFT OUTER JOIN
+  a9a_logreg_model01 m ON (t.feature = m.feature)
+group by
+  t.rowid;
+```
+* Evaluate created model on test data
+```
+create or replace view a9a_logreg_model01_eval as
+select
+  t.label as actual,
+  pd.label as predicted,
+  pd.prob as probability
+from
+  a9atest t JOIN a9a_logreg_model01_predict pd
+    on (t.rowid = pd.rowid);
+
+SELECT count(1) / ${num_test_instances}
+FROM a9a_logreg_model01_eval
+WHERE actual == predicted;
+```
 ### Credits
 
 Adapted from this parts: [data preparation](https://github.com/myui/hivemall/wiki/a9a-binary-dataset) and [logistic regression](https://github.com/myui/hivemall/wiki/a9a-binary-classification-(logistic-regression)) of [hivemall wiki](https://github.com/myui/hivemall/wiki).

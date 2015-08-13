@@ -1,10 +1,3 @@
-use a9a;
-
-delete jar /root/scripts/hive/hivemall-with-dependencies.jar;
-add jar /root/scripts/hive/hivemall-with-dependencies.jar;
-
-source /root/scripts/hive/define-all.hive;
-
 select count(1) from a9atrain;
 -- set total_steps ideally be "count(1) / #map tasks"
 set hivevar:total_steps=32561;
