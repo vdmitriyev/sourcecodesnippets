@@ -93,7 +93,7 @@ from
   a9atest LATERAL VIEW explode(addBias(features)) t AS feature;
 ```
 * Build your model with logistic regression
-```
+```sql
 select count(1) from a9atrain;
 -- set total_steps ideally be "count(1) / #map tasks"
 set hivevar:total_steps=32561;
@@ -115,7 +115,7 @@ from
 group by feature;
 ```
 * Make predictions with model created above
-```
+```sql
 create or replace view a9a_logreg_model01_predict
 as
 select
@@ -129,7 +129,7 @@ group by
   t.rowid;
 ```
 * Evaluate created model on test data
-```
+```sql
 create or replace view a9a_logreg_model01_eval as
 select
   t.label as actual,
