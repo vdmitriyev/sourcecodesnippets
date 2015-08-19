@@ -2,7 +2,7 @@
 
 ### Getting Data into Hadoop
 * Start your SSH session to your Hadoop instance
-* Create folder and download all necessary files from [hivemall]() UDF collection
+* Create folder and download all necessary files from [hivemall](https://github.com/myui/hivemall) UDF collection. For more information on hivemall project use its wiki page [here](https://github.com/myui/hivemall/wiki).
 ```shell
 sudo mkdir /root/scripts/hive/
 cd /root/scripts/hive/
