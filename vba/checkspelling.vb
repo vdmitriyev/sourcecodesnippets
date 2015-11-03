@@ -7,7 +7,7 @@ Public Sub ChangeSpellCheckingLanguage()
         For k = 1 To fcount
             If ActivePresentation.Slides(j).Shapes(k).HasTextFrame Then
                 ActivePresentation.Slides(j).Shapes(k) _
-                .TextFrame.TextRange.LanguageID = msoLanguageIDEnglishAUS
+                .TextFrame.TextRange.LanguageID = msoLanguageIDEnglishUS
             End If
         Next k
     Next j
