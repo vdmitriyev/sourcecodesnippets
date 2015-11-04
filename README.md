@@ -9,6 +9,7 @@ Own collection of source code code snippets for various programming languages. S
 * [hana](hana)
 * [octave](octave)
 * [python](python)
+* [sublime](sublime)
 * [vba](vba)
 
 ### Author

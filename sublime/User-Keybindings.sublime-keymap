@@ -1,0 +1,4 @@
+[
+    {"keys": ["ctrl+alt+b"], "command": "build"},
+    {"keys": ["ctrl+alt+s"], "command": "markdown_preview", "args": {"target": "save",  "parser":"github"}}
+]

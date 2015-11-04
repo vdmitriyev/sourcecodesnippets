@@ -1,0 +1,40 @@
+{
+    "color_scheme": "Packages/Predawn/predawn.tmTheme",
+    "font_size": 18,
+    "ignored_packages":
+    [
+        "Markdown",
+        "Vintage"
+    ],
+    "update_check": false,
+
+    //
+    // most of the configs taked from here: http://dbader.org/blog/setting-up-sublime-text-for-python-development
+    //
+
+    "line_padding_bottom": 0,
+    "line_padding_top": 0,
+    // Whitespace - no tabs, trimming, end files with \n
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
+
+    // Cursor style - no blinking and slightly wider than default
+    //"caret_style": "solid",
+    "wide_caret": true,
+    "fold_buttons": false,
+    "highlight_line": true,
+    //"auto_complete": false,
+    //"show_minimap": false,
+    "show_full_path": true,
+
+    // Editor view look-and-feel
+    "draw_white_space": "all",
+
+       // Editor behavior
+    "scroll_past_end": false,
+    "highlight_modified_tabs": true,
+    "find_selected_text": true,
+
+}
