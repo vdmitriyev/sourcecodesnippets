@@ -10,6 +10,7 @@ Own collection of source code code snippets for various programming languages. S
 * [octave](octave)
 * [python](python)
 * [sublime](sublime)
+* [totalcmd](totalcmd)
 * [vba](vba)
 
 ### Author
