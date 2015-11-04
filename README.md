@@ -5,6 +5,8 @@ Own collection of source code code snippets for various programming languages. S
 ### Collection
 
 * [bat](bat)
+* [hive](hive)
+* [hana](hana)
 * [octave](octave)
 * [python](python)
 * [vba](vba)
