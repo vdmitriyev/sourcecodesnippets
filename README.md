@@ -5,13 +5,15 @@ Own collection of source code code snippets for various programming languages. S
 ### Collection
 
 * [bat](bat)
-* [hive](hive)
 * [hana](hana)
+* [hive](hive)
+* [jabref](jabref)
 * [octave](octave)
 * [python](python)
 * [sublime](sublime)
 * [totalcmd](totalcmd)
 * [vba](vba)
+* [win](win)
 
 ### Author
 
