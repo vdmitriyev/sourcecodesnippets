@@ -1,0 +1,23 @@
+table.schemaName = "<YOUR-NEO-SCHEMA-NAME>";
+table.tableType = COLUMNSTORE; 
+table.description = "Boston Housing Prices";
+
+table.columns = [
+	{name = "ID"; sqlType = INTEGER; nullable = true; comment = "ID"; },
+	{name = "CRIM" ; sqlType = DOUBLE; nullable = true; comment = "CRIM"; },
+	{name = "ZN" ; sqlType = DOUBLE; nullable = true; comment = "ZN"; },
+	{name = "INDUS" ; sqlType = DOUBLE; nullable = true; comment = "INDUS - "; },
+	{name = "CHAS" ; sqlType = DOUBLE; nullable = true; comment = "CHAS - "; },
+	{name = "NOX" ; sqlType = DOUBLE; nullable = true; comment = "NOX - "; },
+	{name = "RM" ; sqlType = DOUBLE; nullable = true; comment = "RM - "; },
+	{name = "AGE" ; sqlType = DOUBLE; nullable = true; comment = "AGE - "; },
+	{name = "DIS" ; sqlType = DOUBLE; nullable = true; comment = "DIS - "; },
+	{name = "RAD" ; sqlType = DOUBLE; nullable = true; comment = "RAD - "; },
+	{name = "TAX" ; sqlType = DOUBLE; nullable = true; comment = "TAX - "; },
+	{name = "PTRATIO" ; sqlType = DOUBLE; nullable = true; comment = "PTRATIO - "; },
+	{name = "B" ; sqlType = DOUBLE; nullable = true; comment = "B - "; },
+	{name = "LSTAT" ; sqlType = DOUBLE; nullable = true; comment = "LSTAT - "; },
+	{name = "PRICE" ; sqlType = DOUBLE; nullable = true; comment = "PRICE - "; }
+];
+
+table.primaryKey.pkcolumns = ["ID"];
