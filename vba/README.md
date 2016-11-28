@@ -12,6 +12,8 @@ Collection of various VBA scripts. Some additional MS Office ticks can be found 
 	- Drawing a dynamic progressbar on the bottom of the MS Power Point presentation
 * [PPTtoPDFwithAnimationsPart1](PPTtoPDFwithAnimationsPart1.vb) || [PPTtoPDFwithAnimationsPart2](PPTtoPDFwithAnimationsPart2.vb)
 	- Expiring MS Power Point slides to a PDF file with animations. More can be found [here](http://vdmitriyev.github.io/blog/how-to-export-ms-power-point-slides-to-the-pdf-file-and-keep-animations.html).
+* [deleteimagesonslides.vb]()
+    - Delete all images on slides
 
 ### MS Office Tricks
 
