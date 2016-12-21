@@ -8,11 +8,13 @@ Own collection of source code code snippets for various programming languages. S
 * [hana](hana)
 * [hive](hive)
 * [jabref](jabref)
+* [latex]()
 * [octave](octave)
 * [python](python)
 * [sublime](sublime)
 * [totalcmd](totalcmd)
 * [vba](vba)
+* [web](web)
 * [win](win)
 
 ### Author
