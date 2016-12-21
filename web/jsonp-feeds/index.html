@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>JSONP Feeds Parser</title>
+  <meta name="description" content="JSONP Feeds Parser">
+  <meta name="author" content="Viktor">
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+	<script src="js/jsonp-feeds.js"></script>
+	<script src="js/xml-feeds.js"></script>
+	<script type="text/javascript" 
+			src="http://feed.issuu.com/folder/36bee7f3-9445-4d25-924a-49baa77a564c/rss20.jsonp">
+	</script>
+</head>
+
+<body>
+  
+  <div id="mainContent">
+	<center>
+		<input type="button" name="Parse" value="Display XML Feeds" onClick="displayXMLFeeds()">		
+		<input type="button" name="Parse" value="Display JSONP Feeds" onClick="displayJSONPFeeds()">
+	</center>
+	<table border="0" width="100%">
+		<tr>
+			<td valign=top width="50%">
+				<div id="feedsXMLContent">&nbsp;</div>
+			</td>
+			<td valign=top width="50%">
+				<div id="feedsJSONPContent">&nbsp;</div>
+			</td>
+		</tr>
+	</table>
+  </div>
+</body>
+</html>
