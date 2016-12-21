@@ -7,7 +7,7 @@ How to compile **tex** files with text editors used by me.
 Options -> Configure TexStudio -> Commands -> PdfLatex
 
 ```text
-pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|bibtex %|pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|rm %.aux %.bbl %.blg %.dvi %.log %.out %.toc %.synctex.gz
+pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|bibtex %|pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|rm %.aux %.bbl %.blg %.dvi %.log %.out %.toc %.synctex.gz
 ```
 
 ### TexMaker: Command for the compiling tex file
