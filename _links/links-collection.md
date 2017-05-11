@@ -106,6 +106,7 @@ Collection of links and materials grouped into various topics
     - [Using a Raspberry Pi, Arduino and Python for disguise detection](http://www.aicbt.com/disguise-detection/)
     - [Send SMS And MMS From Your Arduino Yun](https://www.twilio.com/blog/2015/02/send-sms-and-mms-from-your-arduino-yun.html)
 * Python in Security
+    - [BrainDamage - Python reference project with collection of small tricks](https://github.com/mehulj94/BrainDamage)
     - [Protecting a Python codebase](http://bits.citrusbyte.com/protecting-a-python-codebase-part-2/)
     - [Automated All-in-One OS Command Injection and Exploitation Tool](https://github.com/stasinopoulos/commix)
     - [BARF : A multiplatform open source Binary Analysis and Reverse engineering Framework](https://github.com/programa-stic/barf-project)
