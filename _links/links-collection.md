@@ -180,6 +180,7 @@ Collection of links and materials grouped into various topics
 
 ### Misc
 
+* [10 Lesser Known Linux Terminal Tricks](https://linoxide.com/linux-how-to/lesser-known-linux-terminal-tricks/) #linux #terminal
 * [Bash Scripting Tutorial](http://linuxconfig.org/bash-scripting-tutorial)
 * [Collection of Data Mining Startups](https://angel.co/data-mining)
 
