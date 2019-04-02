@@ -5,6 +5,8 @@ Collection of interesting links, materials, blogs and packages for Python.
 ### Python Materials
 
 * Randomly in Python
+    - [Inside the Python GIL, David Beazley, 2009](http://www.dabeaz.com/python/GIL.pdf)
+    - [Enforcing Single Responsibility Principle in Python](https://dev.to/wemake-services/enforcing-single-responsibility-principle-in-python-2il8)
     - [Good logging practice in Python](http://victorlin.me/posts/2012/08/26/good-logging-practice-in-python)
     - [Python Pedia. One Stop for Python Programming Resources. It's all about Python.](https://pythonpedia.com/)
     - [Simple & Profound Python Tricks](http://pansop.com/1014/)

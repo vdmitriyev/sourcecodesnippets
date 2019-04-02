@@ -5,6 +5,7 @@ Own collection of source code code snippets for various programming languages. S
 ### Collection
 
 * [_links](_links)
+* [bash](bash)
 * [bat](bat)
 * [hana](hana)
 * [hive](hive)
