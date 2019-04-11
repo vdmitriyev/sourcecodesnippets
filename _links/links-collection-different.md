@@ -8,6 +8,7 @@ Collection of links and materials grouped into various topics
     - [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)
     - [TCPView](https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview)
     - [ZoomIt](https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit)
+    - [ConEmu](https://conemu.github.io/)
 * Articles/Blogs
     - [Get started using Hadoop with Hive in HDInsight to analyze mobile handset use](http://azure.microsoft.com/en-us/documentation/articles/hdinsight-get-started/)
     - [Modeling the Architecture of a Software System](http://msdn.microsoft.com/en-us/library/vstudio/dd490886.aspx)
