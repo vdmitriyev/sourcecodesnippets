@@ -6,6 +6,7 @@ Collection of interesting links, materials, blogs and packages for Python.
 
 * Randomly in Python
     - [Inside the Python GIL, David Beazley, 2009](http://www.dabeaz.com/python/GIL.pdf)
+    - [Sending Emails With Python](https://realpython.com/python-send-email/)
     - [Enforcing Single Responsibility Principle in Python](https://dev.to/wemake-services/enforcing-single-responsibility-principle-in-python-2il8)
     - [Good logging practice in Python](http://victorlin.me/posts/2012/08/26/good-logging-practice-in-python)
     - [Python Pedia. One Stop for Python Programming Resources. It's all about Python.](https://pythonpedia.com/)
@@ -134,6 +135,7 @@ Collection of interesting links, materials, blogs and packages for Python.
     - [Task queues from Full Stack Python](https://www.fullstackpython.com/task-queues.html)
     - [huey - A little multi-threaded task queue for Python](https://github.com/coleifer/huey)
 * Python and Dev Tools
+    - [Get Productive with Python and Visual Studio Code (2018/2019)](https://github.com/qubitron/pydemo)
     - [Choosing the Best Python IDE](http://pedrokroger.net/choosing-best-python-ide/)
     - [Setting Up Sublime Text 3 for Full Stack Python Development](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
     - [Sublime Text 3 for Python, JavaScript and web developers](http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers/)
@@ -141,6 +143,9 @@ Collection of interesting links, materials, blogs and packages for Python.
 * Python 2/3
     -  [Cheat Sheet: Writing Python 2-3 compatible code](http://python-future.org/compatible_idioms.html)
     -  [Porting Python 2 Code to Python 3](https://docs.python.org/3/howto/pyporting.html)
+* Python and obfuscation
+    - [Protecting Python Sources With Cython](https://medium.com/@xpl/protecting-python-sources-using-cython-dcd940bb188e)
+    - [Using Cython to protect a Python codebase](https://bucharjan.cz/blog/using-cython-to-protect-a-python-codebase.html)
 
 ### Interesting Python Packages
 
