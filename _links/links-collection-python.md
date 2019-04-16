@@ -5,6 +5,7 @@ Collection of interesting links, materials, blogs and packages for Python.
 ### Python Materials
 
 * Randomly in Python
+    - [A landscape diagram for Python data](https://community.ibm.com/community/user/datascience/blogs/paco-nathan/2019/03/12/a-landscape-diagram-for-python-data)
     - [Inside the Python GIL, David Beazley, 2009](http://www.dabeaz.com/python/GIL.pdf)
     - [Sending Emails With Python](https://realpython.com/python-send-email/)
     - [Enforcing Single Responsibility Principle in Python](https://dev.to/wemake-services/enforcing-single-responsibility-principle-in-python-2il8)
