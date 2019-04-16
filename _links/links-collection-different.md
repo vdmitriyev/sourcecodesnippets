@@ -13,6 +13,15 @@ Collection of links and materials grouped into various topics
     - [Get started using Hadoop with Hive in HDInsight to analyze mobile handset use](http://azure.microsoft.com/en-us/documentation/articles/hdinsight-get-started/)
     - [Modeling the Architecture of a Software System](http://msdn.microsoft.com/en-us/library/vstudio/dd490886.aspx)
 
+## Network
+
+* Серия статей **Сети для самых маленьких**
+    - [Часть нулевая. Планирование](https://habr.com/ru/post/134892/)
+    - ...
+* [VLAN (Virtual Local Area Network)](http://xgu.ru/wiki/VLAN) **на русском**
+* Youtube канал [Xgu.ru](https://www.youtube.com/channel/UCUFTmyQ9dwazauhW02UmnzQ)
+    - [Построение Linux-кластера в облаке. Теория. Часть 1](https://www.youtube.com/watch?v=k24Se9BvnfM)
+
 ## Misc
 
 * [10 Lesser Known Linux Terminal Tricks](https://linoxide.com/linux-how-to/lesser-known-linux-terminal-tricks/) #linux #terminal
