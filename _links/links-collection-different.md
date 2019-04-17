@@ -19,6 +19,7 @@ Collection of links and materials grouped into various topics
     - [Часть нулевая. Планирование](https://habr.com/ru/post/134892/)
     - ...
 * [VLAN (Virtual Local Area Network)](http://xgu.ru/wiki/VLAN) **на русском**
+* [Соответствие OSI и других стеков протоколов](http://xgu.ru/wiki/OSI)
 * Youtube канал [Xgu.ru](https://www.youtube.com/channel/UCUFTmyQ9dwazauhW02UmnzQ)
     - [Построение Linux-кластера в облаке. Теория. Часть 1](https://www.youtube.com/watch?v=k24Se9BvnfM)
 
