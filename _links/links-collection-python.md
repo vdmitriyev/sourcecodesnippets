@@ -80,6 +80,7 @@ Collection of interesting links, materials, blogs and packages for Python.
     - [How to prepare package for PyPi](http://gehrcke.de/2014/02/distributing-a-python-command-line-application/) #python #research
     - [Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
 * Python in Web
+    - [Docker with uWSGI, Nginx and Flask in a single container](https://github.com/tiangolo/uwsgi-nginx-flask-docker)
     - [HOWTO Use Python in the web](https://docs.python.org/release/2.7/howto/webservers.html)
     - [Common Mistakes as Python Web Developer](http://lucumr.pocoo.org/2010/12/24/common-mistakes-as-web-developer/)
     - [Eat at Joe's](http://mrjoes.github.io/2013/06/21/python-realtime.html)
