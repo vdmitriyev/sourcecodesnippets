@@ -4,6 +4,8 @@ Collection of interesting links, materials, blogs and packages for Python.
 
 ### Python Materials
 
+* Mega collections by others
+    - [Awesome Python Applications](https://github.com/mahmoud/awesome-python-applications)
 * Randomly in Python
     - [A landscape diagram for Python data](https://community.ibm.com/community/user/datascience/blogs/paco-nathan/2019/03/12/a-landscape-diagram-for-python-data)
     - [Inside the Python GIL, David Beazley, 2009](http://www.dabeaz.com/python/GIL.pdf)
@@ -18,9 +20,9 @@ Collection of interesting links, materials, blogs and packages for Python.
     - [Profiling python with cProfile](https://ymichael.com/2014/03/08/profiling-python-with-cprofile.html)
     - [The Most Diabolical Python Antipattern](https://realpython.com/blog/python/the-most-diabolical-python-antipattern/)
     - Good guidelines on the pythonic project structure/s
-        - [How to Develop Quality Python Code](https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code?)
-        - [Open-Sourcing Your Own Python Library 101](https://www.endgame.com/blog/open-sourcing-your-own-python-library-101)
-        - [Repository Structure and Python](http://www.kennethreitz.org/essays/repository-structure-and-python)
+        + [How to Develop Quality Python Code](https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code?)
+        + [Open-Sourcing Your Own Python Library 101](https://www.endgame.com/blog/open-sourcing-your-own-python-library-101)
+        + [Repository Structure and Python](http://www.kennethreitz.org/essays/repository-structure-and-python)
     - [Python Tips and Traps](https://www.airpair.com/python/posts/python-tips-and-traps)
     - [Automate the Boring Stuff with Python (Practical Programming for Total Beginners)](http://automatetheboringstuff.com/)
     - [Реализация словаря в Python 2.7](http://habrahabr.ru/post/247843/)
