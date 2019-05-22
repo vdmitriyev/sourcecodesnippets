@@ -7,6 +7,7 @@ Collection of interesting links, materials, blogs and packages for Python.
 * Mega collections by others
     - [Awesome Python Applications](https://github.com/mahmoud/awesome-python-applications)
 * Randomly in Python
+    - [Remote Python Development in Visual Studio Code](https://devblogs.microsoft.com/python/remote-python-development-in-visual-studio-code/)
     - [A landscape diagram for Python data](https://community.ibm.com/community/user/datascience/blogs/paco-nathan/2019/03/12/a-landscape-diagram-for-python-data)
     - [Inside the Python GIL, David Beazley, 2009](http://www.dabeaz.com/python/GIL.pdf)
     - [Sending Emails With Python](https://realpython.com/python-send-email/)
