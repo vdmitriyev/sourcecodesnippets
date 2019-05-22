@@ -29,6 +29,10 @@ Collection of links and materials grouped into various topics
 * [Bash Scripting Tutorial](http://linuxconfig.org/bash-scripting-tutorial)
 * [Collection of Data Mining Startups](https://angel.co/data-mining)
 
+### Databases (PostgreSQL)
+
+* [Postgres Database Health Check Notebook](https://github.com/Azure/azure-postgresql/blob/master/samples/Health%20Checks/Postgres_database_health_check_notebook.ipynb)
+
 ## R
 
 ### R Related Materials
