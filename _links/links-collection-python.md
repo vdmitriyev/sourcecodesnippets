@@ -153,6 +153,13 @@ Collection of interesting links, materials, blogs and packages for Python.
     - [Protecting Python Sources With Cython](https://medium.com/@xpl/protecting-python-sources-using-cython-dcd940bb188e)
     - [Using Cython to protect a Python codebase](https://bucharjan.cz/blog/using-cython-to-protect-a-python-codebase.html)
 
+### Python Books
+
+* Effective Python
+    - https://effectivepython.com/
+    - ["Effective Python: 59 Specific Ways to Write Better Python" by Brett Slatkin, 1st edition, source code](https://github.com/SigmaQuan/Better-Python-59-Ways)
+    - ["Effective Python: Second Edition" by Brett Slatkin, 2nd edition, source code](https://github.com/SigmaQuan/Better-Python-59-Ways)
+
 ### Interesting Python Packages
 
 * [sendman - REST API for database](http://www.jeffknupp.com/blog/2014/04/12/great-products-seem-obvious-in-retrospect/) #extra #python
