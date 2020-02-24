@@ -21,7 +21,8 @@ kill $(ps aux | grep 8888 | awk '{print $2}')
 * Determine the space available on the disks
 ```
 sudo df -h
-sudo du -hsc *
+sudo du -hsc * # size on disk
+sudo du -hbc * # real size of files
 sudo du -hs /var
 ```
 
