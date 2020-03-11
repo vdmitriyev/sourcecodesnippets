@@ -5,6 +5,7 @@ Collection of interesting links, materials, blogs and packages for Python.
 ### Python Materials
 
 * Mega collections by others
+    - [Awesome Python frameworks, libraries, software and resource](https://github.com/vinta/awesome-python)
     - [Awesome Python Applications](https://github.com/mahmoud/awesome-python-applications)
     - [Awesome Clean Code Resource (also for Python)](https://github.com/abiodunjames/Awesome-Clean-Code-Resources#python)
     - [Awesome Flake8 Extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
