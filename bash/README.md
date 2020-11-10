@@ -34,6 +34,8 @@ sudo apt clean # remove cache
 * Determine number of cores + CPUs
 ```
 lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
+```
+```
 echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"
 ```
 
