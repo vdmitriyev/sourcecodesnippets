@@ -31,6 +31,14 @@ sudo du -hs /var
 sudo apt clean # remove cache
 ```
 
+* Determine number of cores + CPUs
+```
+lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
+echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"
+```
+
 * Articles
     - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
+    - https://unix.stackexchange.com/questions/218074/how-to-know-number-of-cores-of-a-system-in-linux
+    
