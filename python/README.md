@@ -2,10 +2,18 @@
 
 This is a collection of a various Python scripts and helper information.
 
+## Scripts
+
+* [windows](windows)
+    - Script to create virtualenv from requirements.txt
+    - Script to use virtualenv
+
 ### Scripts Collection and Subfolders
 
 * [helper_directory](helper_directory)
-	- Useful functions wrapper for working with files and directories
+    - Useful functions wrapper for working with files and directories
+* [download_file.py](download_file.py)
+    - Downloads file using an URL
 
 ## One Liners
 
@@ -34,12 +42,13 @@ python3 -c "import sys; print ('\n'.join(sys.path))"
 
 ## Starting Simple Python Web Server
 
+* Python 2
 ```
-#Python2
 python -m SimpleHTTPServer 80
-
-#Python3
-python3 -m http.server 80
+```
+* Python 3
+```
+python -m http.server 5151 --bind 127.0.0.1
 ```
 
 ## Author

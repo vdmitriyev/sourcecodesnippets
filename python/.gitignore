@@ -1,0 +1,15 @@
+# files
+settings.py
+credentials.py
+TODOs.txt
+
+# extensions
+*.csv
+
+# folders
+*.ipynb_checkpoints
+__pycache__/*
+.venv/*
+.logs/*
+data/*
+experiments/*
