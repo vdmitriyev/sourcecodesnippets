@@ -25,6 +25,10 @@ sudo du -hsc * # size on disk
 sudo du -hbc * # real size of files
 sudo du -hs /var
 ```
+* Information about disks
+```
+sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
+```
 
 * Remove some staff
 ```
