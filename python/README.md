@@ -51,6 +51,18 @@ python -m SimpleHTTPServer 80
 python -m http.server 5151 --bind 127.0.0.1
 ```
 
+## Exceptions
+
+```python
+import traceback
+
+try:
+    print ('[i] Exception handling that shows the line with exception')
+    raise Exception('Test')
+except Exception:
+    print (traceback.format_exc())
+```
+
 ## Author
 
 * Viktor Dmitriyev

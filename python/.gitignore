@@ -1,7 +1,9 @@
 # files
 settings.py
 credentials.py
+test.py
 TODOs.txt
+
 
 # extensions
 *.csv
