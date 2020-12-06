@@ -51,6 +51,17 @@ python -m SimpleHTTPServer 80
 python -m http.server 5151 --bind 127.0.0.1
 ```
 
+## Format JSON in comman line
+
+* Formatting json
+```bash
+python -m json.tool myfile.json
+```
+* OR
+```bash
+python3 -m json.tool myfile.json
+```
+
 ## Exceptions
 
 ```python
