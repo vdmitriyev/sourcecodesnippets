@@ -62,6 +62,15 @@ python -m json.tool myfile.json
 python3 -m json.tool myfile.json
 ```
 
+## Date
+
+```
+from datetime import datetime 
+now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+# or
+now = datetime.now().strftime("%Y-%m-%d %H:%M[:%S[.%f]]")
+```
+
 ## Exceptions
 
 ```python
