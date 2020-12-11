@@ -64,11 +64,27 @@ python3 -m json.tool myfile.json
 
 ## Date
 
-```
+```python
 from datetime import datetime 
 now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 # or
 now = datetime.now().strftime("%Y-%m-%d %H:%M[:%S[.%f]]")
+```
+
+## Disable bytecode
+```bash
+# linux
+export PYTHONDONTWRITEBYTECODE=1
+```
+
+```bash
+# windows
+set PYTHONDONTWRITEBYTECODE=1
+```
+
+```python
+import sys
+sys.dont_write_bytecode=True
 ```
 
 ## Exceptions
