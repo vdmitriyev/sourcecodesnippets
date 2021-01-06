@@ -3,6 +3,7 @@ settings.py
 credentials.py
 test.py
 TODOs.txt
+gist-comments.md
 
 
 # extensions
@@ -15,3 +16,4 @@ __pycache__/*
 .logs/*
 data/*
 experiments/*
+.vscode/*
