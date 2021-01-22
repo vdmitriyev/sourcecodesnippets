@@ -46,6 +46,7 @@ echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/
 * List directory as tree (required: ```apt-get install tree```)
 ```
 tree .
+tree -a .
 ```
 
 * Articles
