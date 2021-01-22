@@ -43,6 +43,11 @@ lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
 echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"
 ```
 
+* List directory as tree (required: ```apt-get install tree```)
+```
+tree .
+```
+
 * Articles
     - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
