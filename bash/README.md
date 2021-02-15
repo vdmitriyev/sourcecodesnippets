@@ -49,6 +49,11 @@ tree .
 tree -a .
 ```
 
+* Flush disk cache
+```bash
+sync; echo 3 > /proc/sys/vm/drop_caches
+```
+
 * Articles
     - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
