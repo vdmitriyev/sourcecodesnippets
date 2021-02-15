@@ -12,6 +12,7 @@ Own collection of source code code snippets for various programming languages. S
 * [jabref](jabref)
 * [latex]()
 * [octave](octave)
+* [postgresql](postgresql)
 * [python](python)
 * [sublime](sublime)
 * [totalcmd](totalcmd)
