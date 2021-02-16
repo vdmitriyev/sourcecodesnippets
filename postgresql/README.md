@@ -16,6 +16,6 @@ SHOW shared_buffers;
 ```
 
 Clusters a table according to an index (e.g. orders entrie in this table)
-```
+```sql
 CLUSTER employees USING employees_ind;
 ```
