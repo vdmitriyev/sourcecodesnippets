@@ -19,3 +19,8 @@ Clusters a table according to an index (e.g. orders entrie in this table)
 ```sql
 CLUSTER employees USING employees_ind;
 ```
+
+See what is inside a particular index
+```sql
+SELECT * FROM pgstatindex('idx_emails_tree')
+```
