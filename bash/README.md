@@ -61,7 +61,7 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 
 ### Useful cli utils
 
-* ```bat`` or ```batcat``` - syntax highlighting for a large number of programming and markup languages
+* ```bat``` or ```batcat``` - syntax highlighting for a large number of programming and markup languages
     - ```apt install bat```
     - https://github.com/sharkdp/bat
 
