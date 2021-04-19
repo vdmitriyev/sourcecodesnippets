@@ -64,6 +64,9 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 * ```bat``` or ```batcat``` - syntax highlighting for a large number of programming and markup languages
     - ```apt install bat```
     - https://github.com/sharkdp/bat
+* ```exa``` -> ls alternative
+    - have to be compiled on Ubuntu
+    - https://github.com/ogham/exa
 
 
     
