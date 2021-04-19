@@ -58,4 +58,12 @@ sync; echo 3 > /proc/sys/vm/drop_caches
     - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
     - https://unix.stackexchange.com/questions/218074/how-to-know-number-of-cores-of-a-system-in-linux
+
+### Useful cli utils
+
+* ```bat`` or ```batcat``` - syntax highlighting for a large number of programming and markup languages
+    - ```apt install bat```
+    - https://github.com/sharkdp/bat
+
+
     
