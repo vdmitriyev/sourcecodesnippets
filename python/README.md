@@ -89,14 +89,37 @@ sys.dont_write_bytecode=True
 
 ## Exceptions
 
+* Simple implementation
 ```python
 import traceback
-
 try:
     print ('[i] Exception handling that shows the line with exception')
     raise Exception('Test')
 except Exception:
     print (traceback.format_exc())
+```
+* Further implementation
+```python
+def log_traceback(ex, ex_traceback=None):
+    ''' Logs exceptions'''
+    if ex_traceback is None: ex_traceback = ex.__traceback__
+    tb_lines = [ line.rstrip('\n') for line in
+                 traceback.format_exception(ex.__class__, ex, ex_traceback)]
+    #logging.exception(tb_lines)
+    print(tb_lines)
+try:         
+    raise Exception('A test exception')
+except Exception as ex:
+    _, _, ex_traceback = sys.exc_info()
+    log_traceback(ex, ex_traceback)
+```
+
+## Object Helpers
+```python
+def dump(obj):
+    """ Makes dump of the object (helper function)"""
+    for attr in dir(obj):
+        print('obj.{0} = {1}'.format(attr, getattr(obj, attr)))
 ```
 
 ## Author
