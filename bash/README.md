@@ -18,12 +18,16 @@ kill $(ps aux | grep 8888 | awk '{print $2}')
 
 ### Ubuntu (e.g. LTS 18.04) / Disk space problem
 
-* Determine the space available on the disks
+* Determine the space available on the disks (**df**)
 ```
 sudo df -h
+```
+* Determine the space available on the disks (**du**)
+```
 sudo du -hsc * # size on disk
 sudo du -hbc * # real size of files
 sudo du -hs /var
+sudo du -h | sort -h # sort output
 ```
 * Information about disks
 ```
