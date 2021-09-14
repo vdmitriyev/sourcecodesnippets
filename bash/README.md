@@ -58,10 +58,22 @@ tree -a .
 sync; echo 3 > /proc/sys/vm/drop_caches
 ```
 
-* Articles
+
+* Shows lines of an output file with grep
+```bash
+grep -n <pattern> <file> 
+cat -n <file> | grep <pattern>
+```
+* Color the grep-match for easy reading.
+```
+alias grep='grep -inE --color=auto'
+```
+
+* Relevant articles
     - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
     - https://unix.stackexchange.com/questions/218074/how-to-know-number-of-cores-of-a-system-in-linux
+    - https://unix.stackexchange.com/questions/19480/how-to-display-line-number-while-doing-grep-on-a-file
 
 ### Useful cli utils
 
