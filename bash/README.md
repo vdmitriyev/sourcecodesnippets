@@ -65,8 +65,13 @@ grep -n <pattern> <file>
 cat -n <file> | grep <pattern>
 ```
 * Color the grep-match for easy reading.
-```
+```bash
 alias grep='grep -inE --color=auto'
+```
+* Show linenumners in ```nano```
+```bash
+nano -l <file>
+alias nano='nano -l'
 ```
 
 * Relevant articles
@@ -74,6 +79,7 @@ alias grep='grep -inE --color=auto'
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
     - https://unix.stackexchange.com/questions/218074/how-to-know-number-of-cores-of-a-system-in-linux
     - https://unix.stackexchange.com/questions/19480/how-to-display-line-number-while-doing-grep-on-a-file
+    - https://www.tecmint.com/learn-nano-text-editor-in-linux/
 
 ### Useful cli utils
 
