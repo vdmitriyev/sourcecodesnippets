@@ -87,6 +87,10 @@ alias nano='nano -l'
 ```bash
 sudo tcpdump port 443 and '(tcp-syn|tcp-ack)!=0'
 ```
+* Active TCP connections
+```
+netstat -plunt
+```
 
 ### Useful cli utils
 
