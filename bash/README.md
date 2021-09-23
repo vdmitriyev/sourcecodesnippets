@@ -81,6 +81,13 @@ alias nano='nano -l'
     - https://unix.stackexchange.com/questions/19480/how-to-display-line-number-while-doing-grep-on-a-file
     - https://www.tecmint.com/learn-nano-text-editor-in-linux/
 
+### Troubleshoot network connection
+
+* Use ```tcpdump``` utility to monitor desired ports
+```bash
+sudo tcpdump port 443 and '(tcp-syn|tcp-ack)!=0'
+```
+
 ### Useful cli utils
 
 * ```bat``` or ```batcat``` - syntax highlighting for a large number of programming and markup languages
