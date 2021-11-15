@@ -11,3 +11,12 @@ Interesting approaches/tools for CSS and HTML.
 }
 </style>
 ```
+or 
+
+```css
+<style>
+* { 
+    outline: 1px solid red; 
+}
+</style>
+```
