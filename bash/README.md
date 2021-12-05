@@ -91,6 +91,10 @@ sudo tcpdump port 443 and '(tcp-syn|tcp-ack)!=0'
 ```
 netstat -plunt
 ```
+* Display all active Internet connections
+```
+netstat -natp
+```
 
 ### Useful cli utils
 
