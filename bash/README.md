@@ -96,6 +96,10 @@ netstat -plunt
 netstat -natp
 ```
 
+### Configurations
+
+* https://www.tecmint.com/restrict-ssh-user-to-directory-using-chrooted-jail/
+
 ### Useful cli utils
 
 * ```bat``` or ```batcat``` - syntax highlighting for a large number of programming and markup languages
