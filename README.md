@@ -7,6 +7,7 @@ Own collection of source code code snippets for various programming languages. S
 * [_links](_links)
 * [bash](bash)
 * [bat](bat)
+* [conemu](conemu)
 * [hana](hana)
 * [hive](hive)
 * [jabref](jabref)
