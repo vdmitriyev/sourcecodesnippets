@@ -2,6 +2,11 @@
 
 How to compile **tex** files with text editors used by me.
 
+### Overleaf
+
+* https://overleaf.com/
+	+ whenerver its possible, try to use this particular LaTeX editor
+	
 ### TexStudio: Command for compiling tex file
 
 Options -> Configure TexStudio -> Commands -> PdfLatex
@@ -9,6 +14,8 @@ Options -> Configure TexStudio -> Commands -> PdfLatex
 ```text
 pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|makeglossaries %|bibtex %|pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|rm %.aux %.bbl %.blg %.dvi %.log %.out %.toc %.synctex.gz
 ```
+
+Config for TexStudio here [texstudio.txsprofile](texstudio.txsprofile).
 
 ### TexMaker: Command for the compiling tex file
 

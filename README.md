@@ -11,7 +11,7 @@ Own collection of source code code snippets for various programming languages. S
 * [hana](hana)
 * [hive](hive)
 * [jabref](jabref)
-* [latex]()
+* [latex](latex)
 * [octave](octave)
 * [postgresql](postgresql)
 * [python](python)
