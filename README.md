@@ -18,6 +18,7 @@ Own collection of source code code snippets for various programming languages. S
 * [sublime](sublime)
 * [totalcmd](totalcmd)
 * [vba](vba)
+* [vs code](vs-code)
 * [web](web)
 * [win](win)
 
