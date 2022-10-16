@@ -24,6 +24,7 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
 * [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
 * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 * [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
+* [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 * Jupyter Notebook Renderers
 * CodeSnap
     - Crtl+Shift + P -> Preferences: Open Settings (UI) -> codesnap -> *edit settings here*
