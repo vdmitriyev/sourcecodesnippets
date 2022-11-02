@@ -10,12 +10,6 @@ Collection of various bash commands.
 kill $(ps aux | grep 8888 | awk '{print $2}')
 ```
 
-### Linux Utils
-
-* Cheat sheet on [Linux Performance](http://www.brendangregg.com/linuxperf.html)
-![](http://www.brendangregg.com/Perf/linux_perf_tools_full.png?)
-
-
 ### Ubuntu (e.g. LTS 18.04) / Disk space problem
 
 * Determine the space available on the disks (**df**)
@@ -58,7 +52,6 @@ tree -a .
 sync; echo 3 > /proc/sys/vm/drop_caches
 ```
 
-
 * Shows lines of an output file with grep
 ```bash
 grep -n <pattern> <file> 
@@ -81,6 +74,21 @@ alias nano='nano -l'
     - https://unix.stackexchange.com/questions/19480/how-to-display-line-number-while-doing-grep-on-a-file
     - https://www.tecmint.com/learn-nano-text-editor-in-linux/
 
+### bash history
+
+* Execute a command without keeping it in history
+```
+<your_secret_command>; history -d $((HISTCMD-1))
+```
+
+* Execute a command without keeping it in history (can start your session with)
+```
+export HISTFILE=/dev/null ;history -d $(history 1)
+```
+
+* Relevant articles
+    - Execute a command without keeping it in history 
+    
 ### Troubleshoot network connection
 
 * Use ```tcpdump``` utility to monitor desired ports
@@ -95,6 +103,11 @@ netstat -plunt
 ```
 netstat -natp
 ```
+
+### Linux Utils
+
+* Cheat sheet on [Linux Performance](http://www.brendangregg.com/linuxperf.html)
+![](http://www.brendangregg.com/Perf/linux_perf_tools_full.png?)
 
 ### Configurations
 
