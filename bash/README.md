@@ -104,6 +104,16 @@ netstat -plunt
 netstat -natp
 ```
 
+### zsh
+
+* Install ``sudo apt install zsh```
+* Make default ``chsh -s $(which zsh)```
+* Check if worked ```$SHELL --version```
+* Install and use [ohmyzsh](https://ohmyz.sh/)
+* Relevant articles
+    + https://github.com/ohmyzsh/ohmyzsh
+    + https://www.sitepoint.com/zsh-tips-tricks/
+
 ### Linux Utils
 
 * Cheat sheet on [Linux Performance](http://www.brendangregg.com/linuxperf.html)
