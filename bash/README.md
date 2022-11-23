@@ -118,6 +118,15 @@ netstat -natp
     + Check option: ```Terminal > Keyboard > Initial state of numeric pad > Normal```
     + Materials
         + https://kb.iu.edu/d/axpf
+ 
+ ### zsh
+ 
+Fix issues with keys by editing ```nano ~/.zshrc```
+ ```text
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+```
+ 
     
 
 ### Linux Utils
