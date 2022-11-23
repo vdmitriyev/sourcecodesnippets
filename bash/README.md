@@ -106,13 +106,19 @@ netstat -natp
 
 ### zsh
 
-* Install ``sudo apt install zsh```
-* Make default ``chsh -s $(which zsh)```
+* Install ```sudo apt install zsh```
+* Make default ```chsh -s $(which zsh)```
 * Check if worked ```$SHELL --version```
 * Install and use [ohmyzsh](https://ohmyz.sh/)
 * Relevant articles
     + https://github.com/ohmyzsh/ohmyzsh
     + https://www.sitepoint.com/zsh-tips-tricks/
+* zsh + NumLock Issue
+    + Check option: ```Terminal -> Features -> Disable application keypad mode```
+    + Check option: ```Terminal > Keyboard > Initial state of numeric pad > Normal```
+    + Materials
+        + https://kb.iu.edu/d/axpf
+    
 
 ### Linux Utils
 
