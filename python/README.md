@@ -130,7 +130,10 @@ def dump(obj):
     + Create file ```touch .pre-commit-config.yaml``` and ```pre-commit sample-config````
     + Install the git hook scripts: ```pre-commit install```
     + Run manually: ```pre-commit run --all-files```
-    + Add further pluings
+    + Add further plugins
+* isort
+    + https://github.com/pycqa/isort
+    + VS Code Extention + Config: https://marketplace.visualstudio.com/items?itemName=ms-python.isort
 
 ## Author
 
