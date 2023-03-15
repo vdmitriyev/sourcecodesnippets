@@ -122,6 +122,16 @@ def dump(obj):
         print('obj.{0} = {1}'.format(attr, getattr(obj, attr)))
 ```
 
+### Python Code Quality
+
+* Base article - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
+* [pre-commit](https://pre-commit.com/#install)
+    + Install: ```pip install pre-commit```
+    + Create file ```touch .pre-commit-config.yaml``` and ```pre-commit sample-config````
+    + Install the git hook scripts: ```pre-commit install```
+    + Run manually: ```pre-commit run --all-files```
+    + Add further pluings
+
 ## Author
 
 * Viktor Dmitriyev
