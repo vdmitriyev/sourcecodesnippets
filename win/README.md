@@ -1,3 +1,19 @@
+### Command Lines
+
+### How to see which process binds a particular port
+Approach
+   ```
+   netstat -ano | findstr :<port_number>
+   tasklist | findstr <PID>
+   ```
+Example
+   ```
+   netstat -ano | findstr :8081
+   tasklist | findstr 1234
+   ```
+
+
+
 ### Interesting and useful articles and ideas
 
 * [It's time for you to install Windows Terminal](https://www.hanselman.com/blog/its-time-for-you-to-install-windows-terminal)
