@@ -28,7 +28,8 @@ python -c "from random import choice; import uuid; print ('{0}'.format(''.join([
 ```
 
 * Current date of the week
-```python -c "import datetime; print('week of the year {0}'.format(datetime.date.today().isocalendar()[1]))"
+```python
+python -c "import datetime; print('week of the year {0}'.format(datetime.date.today().isocalendar()[1]))"
 ```
 
 * Various Python Paths
