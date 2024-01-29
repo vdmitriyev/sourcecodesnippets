@@ -121,8 +121,21 @@ def dump(obj):
     for attr in dir(obj):
         print('obj.{0} = {1}'.format(attr, getattr(obj, attr)))
 ```
+## VS Code + Python
 
-### Python Code Quality
+* Install VS Code
+* Make use of the VS Code extensions
+    + Python, Pylance, IntelliCode, autoDocstring, Python Type Hint
+    + Remote Development, Dev Containers, Docker, Remote - SSH
+    + Better Comments, isort, Black Formatter, Code Spell Checker
+    + CodeSnap, DotENV, Rainbow CSV
+    + Jupyter, Jupyter Cell Tags, Jupyter Keymap, Jupyter Notebook Renderers, Jupyter Slide Show
+    + LaTeX Workshop
+    + Markdown PDF, Markdown PDF
+    + YAML
+* Configure each extension (if applicable)
+
+## Python Code Quality
 
 * Base article - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
 * [pre-commit](https://pre-commit.com/#install)
@@ -133,7 +146,7 @@ def dump(obj):
     + Add further plugins
 * isort
     + https://github.com/pycqa/isort
-    + VS Code Extention + Config: https://marketplace.visualstudio.com/items?itemName=ms-python.isort
+    + VS Code Extention + Config -> https://marketplace.visualstudio.com/items?itemName=ms-python.isort
 * Black Formatter
     +  https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 
