@@ -134,6 +134,8 @@ def dump(obj):
 * isort
     + https://github.com/pycqa/isort
     + VS Code Extention + Config: https://marketplace.visualstudio.com/items?itemName=ms-python.isort
+* Black Formatter
+    +  https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 
 ## Author
 
