@@ -124,17 +124,7 @@ def dump(obj):
 ```
 ## VS Code + Python
 
-* Install VS Code
-* Make use of the VS Code extensions
-    + Python, Pylance, IntelliCode, autoDocstring, Python Type Hint
-    + Remote Development, Dev Containers, Docker, Remote - SSH
-    + Better Comments, isort, Black Formatter, Code Spell Checker
-    + CodeSnap, DotENV, Rainbow CSV
-    + Jupyter, Jupyter Cell Tags, Jupyter Keymap, Jupyter Notebook Renderers, Jupyter Slide Show
-    + LaTeX Workshop
-    + Markdown PDF, Markdown PDF
-    + YAML
-* Configure each extension (if applicable)
+* https://github.com/vdmitriyev/sourcecodesnippets/blob/master/vs-code/README.md
 
 ## Python Code Quality
 
