@@ -1,23 +1,22 @@
-### About
+## About
 
 Collection of extensions and further tips for [VS Code](https://code.visualstudio.com/).
 
 ### VS Code Extensions
 
-#### Extensions that must to be installed for better development experience
+## Extensions that must to be installed for better development experience
 
-* Python
-* Pylance
-* Jupyter
-* autoDocstring
+* Python, Pylance, IntelliCode, autoDocstring, Python Type Hint
+* Remote Development, Dev Containers, Docker, Remote - SSH
+* Better Comments, isort, Black Formatter, Code Spell Checker
 * indent-rainbow
-* Code Spell Checker
-* Docker
-* Dev Containers
-* Remove - SSH
-* Remote Development
+* CodeSnap, DotENV, Rainbow CSV
+* Jupyter, Jupyter Cell Tags, Jupyter Keymap, Jupyter Notebook Renderers, Jupyter Slide Show
+* LaTeX Workshop
+* Markdown PDF, Markdown PDF
+* YAML
 
-#### Optional VS Code extensions
+### Docs/Options for the VS Code extensions
 
 * [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 * [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
