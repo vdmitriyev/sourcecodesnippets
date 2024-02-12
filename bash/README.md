@@ -32,7 +32,10 @@ sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 ```
 sudo apt clean # remove cache
 ```
-
+* Show linenumners in ```nano```
+```bash
+nano -l <file>
+```
 * Determine number of cores + CPUs
 ```
 lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
@@ -57,22 +60,31 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 grep -n <pattern> <file> 
 cat -n <file> | grep <pattern>
 ```
-* Color the grep-match for easy reading.
-```bash
-alias grep='grep -inE --color=auto'
-```
-* Show linenumners in ```nano```
-```bash
-nano -l <file>
-alias nano='nano -l'
-```
-
 * Relevant articles
     - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
     - https://unix.stackexchange.com/questions/218074/how-to-know-number-of-cores-of-a-system-in-linux
     - https://unix.stackexchange.com/questions/19480/how-to-display-line-number-while-doing-grep-on-a-file
     - https://www.tecmint.com/learn-nano-text-editor-in-linux/
+
+### Configure ```alias``` for bash
+
+* How to configure alias-es (add the lines to the end of the file)
+```bash
+nano ~/.bashrc
+```
+* Configure ```ls```
+```bash
+alias ls='ls --time-style=long-iso --color=tty -Altr'
+```
+* Color the grep-match for easy reading.
+```bash
+alias grep='grep -inE --color=auto'
+```
+* Show linenumners in ```nano```
+```bash
+alias nano='nano -l'
+```
 
 ### bash history
 
