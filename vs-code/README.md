@@ -9,8 +9,7 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
 * Python, Pylance, IntelliCode, autoDocstring, Python Type Hint
 * Remote Development, Dev Containers, Docker, Remote - SSH
 * Better Comments, isort, Black Formatter, Code Spell Checker
-* indent-rainbow
-* CodeSnap, DotENV, Rainbow CSV
+* CodeSnap, DotENV, Rainbow CSV, indent-rainbow
 * Jupyter, Jupyter Cell Tags, Jupyter Keymap, Jupyter Notebook Renderers, Jupyter Slide Show
 * LaTeX Workshop
 * Markdown PDF, Markdown PDF
