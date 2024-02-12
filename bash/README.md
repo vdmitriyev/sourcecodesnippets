@@ -17,12 +17,22 @@ kill $(ps aux | grep 8888 | awk '{print $2}')
 sudo df -h
 ```
 * Determine the space available on the disks (**du**)
-```
-sudo du -hsc * # size on disk
-sudo du -hbc * # real size of files
-sudo du -hs /var
-sudo du -h | sort -h # sort output
-```
+    + Size on disk
+    ```
+    sudo du -hsc *
+    ```
+    + Real size of files
+    ```
+    sudo du -hbc *
+    ```
+    + Size of a single folder
+    ```
+    sudo du -sh /var
+    ```
+    + Sort output
+    ```
+    sudo du -h | sort -h
+    ```
 * Information about disks
 ```
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
