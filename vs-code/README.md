@@ -29,6 +29,7 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
         - (to copy directly in clipboard): Shutter Action -> Copy
 * REST Client
 * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+* [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 
 
 
