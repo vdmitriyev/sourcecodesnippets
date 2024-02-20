@@ -28,6 +28,7 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
     - Crtl+Shift + P -> Preferences: Open Settings (UI) -> codesnap -> *edit settings here*
         - (to copy directly in clipboard): Shutter Action -> Copy
 * REST Client
+* [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 
 
