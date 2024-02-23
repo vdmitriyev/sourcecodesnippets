@@ -168,10 +168,11 @@ sudo apt-get install fish
 ```
 * Make default
 ```
-sudo chsh -s /usr/local/bin/fish
+sudo chsh -s /usr/bin/fish
 ```
-
-    
+* Materials
+    - https://fishshell.com/docs/3.0/tutorial.html#:~:text=Switching%20to%20fish%3F,usr%2Flocal%2Fbin%2Ffish
+    - https://dev.to/iqium/install-fish-shell-on-ubuntu-2204-3337
 
 ### Linux Utils
 
