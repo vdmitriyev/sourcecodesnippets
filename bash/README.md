@@ -128,9 +128,18 @@ netstat -natp
 
 ### zsh
 
-* Install ```sudo apt install zsh```
-* Make default ```chsh -s $(which zsh)```
-* Check if worked ```$SHELL --version```
+* Install
+```
+sudo apt install zsh
+```
+* Make default
+```
+chsh -s $(which zsh)
+```
+* Check if worked
+```
+$SHELL --version
+```
 * Install and use [ohmyzsh](https://ohmyz.sh/)
 * Relevant articles
     + https://github.com/ohmyzsh/ohmyzsh
@@ -141,14 +150,27 @@ netstat -natp
     + Materials
         + https://kb.iu.edu/d/axpf
  
- ### zsh
+ #### zsh - issues
  
 Fix issues with keys by editing ```nano ~/.zshrc```
  ```text
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 ```
- 
+
+### fish
+
+* Install
+```
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install fish
+```
+* Make default
+```
+sudo chsh -s /usr/local/bin/fish
+```
+
     
 
 ### Linux Utils
