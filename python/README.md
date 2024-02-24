@@ -58,7 +58,7 @@ python -m SimpleHTTPServer 80
 python -m http.server 5151 --bind 127.0.0.1
 ```
 
-## Format JSON in comman line
+## Format JSON in command line
 
 * Formatting json
 ```bash
@@ -79,13 +79,14 @@ now = datetime.now().strftime("%Y-%m-%d %H:%M[:%S[.%f]]")
 ```
 
 ## Disable bytecode
-```bash
-# linux
-export PYTHONDONTWRITEBYTECODE=1
-```
+
+On Linux
 
 ```bash
-# windows
+export PYTHONDONTWRITEBYTECODE=1
+```
+On Windows
+```bash
 set PYTHONDONTWRITEBYTECODE=1
 ```
 
@@ -136,14 +137,32 @@ def dump(obj):
 
 * Base article - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
 * [pre-commit](https://pre-commit.com/#install)
-    + Install: ```pip install pre-commit```
-    + Create file ```touch .pre-commit-config.yaml``` and ```pre-commit sample-config````
-    + Install the git hook scripts: ```pre-commit install```
-    + Run manually: ```pre-commit run --all-files```
+    + Install
+        ```
+        pip install pre-commit
+        ```
+    + Create empty config file
+        ```
+        touch .pre-commit-config.yaml
+        ```
+    + View sample config
+        ```
+        pre-commit sample-config
+        ``` 
+    + Install the git hook scripts: 
+        ```
+        pre-commit install
+        ```
+    + Run manually: 
+        ```
+        pre-commit run --all-files
+        ```
     + Add further plugins
+        + https://pre-commit.com/hooks.html
+        + Example: https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
 * isort
     + https://github.com/pycqa/isort
-    + VS Code Extention + Config -> https://marketplace.visualstudio.com/items?itemName=ms-python.isort
+    + VS Code Extension + Config -> https://marketplace.visualstudio.com/items?itemName=ms-python.isort
 * Black Formatter
     +  https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 
