@@ -10,10 +10,16 @@ This is a collection of a various Python scripts and helper information.
 
 ### Scripts Collection and Subfolders
 
-* [helper_directory](helper_directory)
+Located in subdirectory [snippets](snippets)
+
+* [download_file.py]([snippets/helper_directory)
     - Useful functions wrapper for working with files and directories
-* [download_file.py](download_file.py)
+* [download_file.py]([snippets/download_file.py)
     - Downloads file using an URL
+* [jupyter_notebook_config_post_save.py](snippets/jupyter_notebook_config_post_save.py)
+	- Jupyter helpers
+* [pyparser_gist_comments.py](snippets/pyparser_gist_comments.py)
+	- Parser that fetches comments from GitHub Gist
 
 ## One Liners
 

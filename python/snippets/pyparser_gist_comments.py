@@ -1,4 +1,4 @@
-__description__ = 'Parser to fetch comments from GitHub Gist (used for cases when there is not way to revert public gits to secret)'
+__description__ = 'Parser that fetches comments from GitHub Gist (used for cases when there is not way to revert public gits to secret)'
 
 '''
 pip install requests
