@@ -9,7 +9,8 @@ SET PATH=C:\Compilers\Python311\Scripts\;C:\Compilers\Python311\;%PATH%
 python -m venv .venv
 call .\.venv\Scripts\activate.bat
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+pip install uv
+uv pip install -r requirements.txt
 
 :END
 endlocal
