@@ -129,9 +129,19 @@ def dump(obj):
     for attr in dir(obj):
         print('obj.{0} = {1}'.format(attr, getattr(obj, attr)))
 ```
+
 ## VS Code + Python
 
 * https://github.com/vdmitriyev/sourcecodesnippets/blob/master/vs-code/README.md
+
+## pip improvements
+
+* Disable pip outside of a virtual environment. Further info [here](https://unix.stackexchange.com/questions/492041/is-there-a-way-to-disable-pip-outside-of-a-virtual-environment)
+```bash
+pip config set global.require-virtualenv True
+```
+* Materials
+    - https://unix.stackexchange.com/questions/492041/is-there-a-way-to-disable-pip-outside-of-a-virtual-environment
 
 ## Python Code Quality
 
