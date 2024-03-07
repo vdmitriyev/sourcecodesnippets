@@ -168,11 +168,18 @@ pip config set global.require-virtualenv True
         pre-commit run --all-files
         ```
     + Add further plugins
-        + https://pre-commit.com/hooks.html
-        + Example: https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
+        + Overview
+            - https://pre-commit.com/hooks.html
+        + Plugins
+            - https://github.com/psf/black 	
+            - https://github.com/pypa/pip-audit
+                - Runs slow
+        + Wroking example:
+            - https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
 * isort
     + https://github.com/pycqa/isort
-    + VS Code Extension + Config -> https://marketplace.visualstudio.com/items?itemName=ms-python.isort
+    + VS Code Extension + Config
+        - https://marketplace.visualstudio.com/items?itemName=ms-python.isort
 * Black Formatter
     +  https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 
