@@ -130,9 +130,19 @@ def dump(obj):
     for attr in dir(obj):
         print('obj.{0} = {1}'.format(attr, getattr(obj, attr)))
 ```
+
 ## VS Code + Python
 
 * https://github.com/vdmitriyev/sourcecodesnippets/blob/master/vs-code/README.md
+
+## pip improvements
+
+* Disable pip outside of a virtual environment. Further info [here](https://unix.stackexchange.com/questions/492041/is-there-a-way-to-disable-pip-outside-of-a-virtual-environment)
+```bash
+pip config set global.require-virtualenv True
+```
+* Materials
+    - https://unix.stackexchange.com/questions/492041/is-there-a-way-to-disable-pip-outside-of-a-virtual-environment
 
 ## Python Code Quality
 
@@ -159,11 +169,18 @@ def dump(obj):
         pre-commit run --all-files
         ```
     + Add further plugins
-        + https://pre-commit.com/hooks.html
-        + Example: https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
+        + Overview
+            - https://pre-commit.com/hooks.html
+        + Plugins
+            - https://github.com/psf/black 	
+            - https://github.com/pypa/pip-audit
+                - Runs slow
+        + Wroking example:
+            - https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
 * isort
     + https://github.com/pycqa/isort
-    + VS Code Extension + Config -> https://marketplace.visualstudio.com/items?itemName=ms-python.isort
+    + VS Code Extension + Config
+        - https://marketplace.visualstudio.com/items?itemName=ms-python.isort
 * Black Formatter
     +  https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 

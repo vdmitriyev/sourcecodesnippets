@@ -2,9 +2,9 @@
 
 Collection of extensions and further tips for [VS Code](https://code.visualstudio.com/).
 
-### VS Code Extensions
+## VS Code: Extensions
 
-## Extensions that must to be installed for better development experience
+#### Extensions that must to be installed for better development experience
 
 * Python, Pylance, IntelliCode, autoDocstring, Python Type Hint
 * Remote Development, Dev Containers, Docker, Remote - SSH
@@ -15,7 +15,7 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
 * Markdown PDF, Markdown PDF
 * YAML
 
-### Docs/Options for the VS Code extensions
+#### Docs/Options for the VS Code extensions
 
 * [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 * [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
@@ -31,6 +31,22 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
 * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 * [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 
+## VS Code: How to debug a Python module
 
+Example of the ```launch.json``` to debug module (see sections: ```args```, ```msconsconverter```)
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "msconsconverter",
+            "args": ["convert", "--debug", "--input-directory", "tests/data", "--output-directory", "tests/data/output"],
+        }
+    ]
+}
+```
 
 
