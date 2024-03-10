@@ -1,4 +1,5 @@
 @echo off
+cd ..
 setlocal
 :PROMPT
 SET AREYOUSURE=N

@@ -3,18 +3,21 @@ settings.py
 credentials.py
 test.py
 TODOs.txt
-
 snippets/gist-comments.md
-
 
 # extensions
 *.csv
 
 # folders
+**/.ipynb_checkpoints
 *.ipynb_checkpoints
-__pycache__/*
+.ipynb_checkpoints/*
 .venv/*
 .logs/*
+.vscode/*
 data/*
 experiments/*
-.vscode/*
+snippets/data/*
+
+
+

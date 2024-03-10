@@ -6,20 +6,21 @@ This is a collection of a various Python scripts and helper information.
 
 * [windows](windows)
     - Script to create virtualenv from requirements.txt
-    - Script to use virtualenv
+    - Script to start and use virtualenv
 
 ### Scripts Collection and Subfolders
 
 Located in subdirectory [snippets](snippets)
 
-* [download_file.py]([snippets/helper_directory)
-    - Useful functions wrapper for working with files and directories
-* [download_file.py]([snippets/download_file.py)
-    - Downloads file using an URL
+* [urls_availability_in_markdown.py]([snippets/urls_availability_in_markdown.py)
+    - Downloads markdown files and checks, if provided URLS are accessible
 * [jupyter_notebook_config_post_save.py](snippets/jupyter_notebook_config_post_save.py)
 	- Jupyter helpers
 * [pyparser_gist_comments.py](snippets/pyparser_gist_comments.py)
 	- Parser that fetches comments from GitHub Gist
+* deprecated
+    - [helper_directory.py]([snippets/helper_directory.py)
+        - Useful functions wrapper for working with files and directories
 
 ## One Liners
 
