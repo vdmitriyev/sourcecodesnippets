@@ -14,6 +14,7 @@ import requests
 from bs4 import BeautifulSoup
 
 CHECK_TIMEOUT_SEC = 0.2
+REQUEST_TIMEOUT_SEC = 30
 
 
 def download(url: str, force_download: bool = False) -> str:
@@ -58,14 +59,14 @@ def check_url_availability(url: str):
 
     response, result, message = None, None, None
     try:
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, timeout=REQUEST_TIMEOUT_SEC)
         response.raise_for_status()
         result, message = response.status_code, "OK"
     except requests.exceptions.ConnectTimeout as ex:
-        click.echo(traceback.format_exc())
+        click.echo(ex)
         result, message = 408, ex
     except Exception as ex:
-        click.echo(traceback.format_exc())
+        click.echo(ex)
         result, message = -1, ex
         if response is not None:
             result = response.status_code
@@ -111,6 +112,7 @@ def _find_href_elements(bs_html):
 
 
 def _check_broken_links(urls: list, debug: bool = False) -> list:
+
     broken_links = []
     for url in urls:
         time.sleep(CHECK_TIMEOUT_SEC)
@@ -119,19 +121,13 @@ def _check_broken_links(urls: list, debug: bool = False) -> list:
 
         status_code, message = check_url_availability(url)
         if status_code >= 200 and status_code <= 399:
+            pass
+        else:
             if debug:
                 print(f"[i] Is not available URL: {url}")
             broken_links.append({"url": url, "code": status_code, "message": message})
 
     return broken_links
-
-
-def _log_traceback(ex, ex_traceback=None):
-    """Logs exceptions"""
-    if ex_traceback is None:
-        ex_traceback = ex.__traceback__
-    tb_lines = [line.rstrip("\n") for line in traceback.format_exception(ex.__class__, ex, ex_traceback)]
-    print(tb_lines)
 
 
 def find_broken_links(html_page: str, debug: bool = False):
