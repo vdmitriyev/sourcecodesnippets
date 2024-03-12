@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
-__version__ = "1.1"
-__description__ = "Find broken links in a webpage"
+__version__ = "1.2"
+__description__ = "Find broken links in a markdown"
 
 import os
+import re
 import time
 import urllib.parse as urlparse
 
@@ -12,7 +13,7 @@ import markdown
 import requests
 from bs4 import BeautifulSoup
 
-CHECK_TIMEOUT_SEC = 0.5
+CHECK_TIMEOUT_SEC = 0.2
 
 
 def download(url: str, force_download: bool = False) -> str:
@@ -62,23 +63,72 @@ def check_url_availability(url: str):
         return None
 
 
+def _find_urls(text: str):
+    """
+    This function finds URLs in a given text using regular expressions.
+
+    Args:
+        text: The text to search for URLs.
+
+    Returns:
+        A list of URLs found in the text.
+    """
+
+    url_regex = r"""(?i)\b((?:https?://|ftp://|www\.)\S+[^\s.,;?])"""
+    urls = re.findall(url_regex, text)
+
+    return urls
+
+
+def _find_plain_elements(bs_html, search_text: str = "http"):
+    elements_found = []
+    _elements = bs_html.find_all()
+    for el in _elements:
+        if el.string and search_text in el.string:
+            elements_found.extend(_find_urls(el.string))
+
+    return elements_found
+
+
+def _find_href_elements(bs_html):
+    elements_found = []
+    for link in bs_html.find_all("a"):
+        href = link.get("href")
+        if href and href.startswith("http"):
+            elements_found.append(href)
+
+    return elements_found
+
+
+def _check_broken_links(urls: list, debug: bool = False) -> list:
+    broken_links = []
+    for url in urls:
+        time.sleep(CHECK_TIMEOUT_SEC)
+        if debug:
+            print(f"[i] Check URL: {url}")
+        status_code = check_url_availability(url)
+        if not status_code:
+            if debug:
+                print(f"[i] Is not available URL: {url}")
+            broken_links.append(url)
+
+    return broken_links
+
+
 def find_broken_links(html_page: str, debug: bool = False):
     """Parses HTML and returns a list of broken HTTP URLs."""
 
     broken_links = []
     soup = BeautifulSoup(html_page, "html.parser")
-
-    for link in soup.find_all("a"):
-        href = link.get("href")
-        if href and href.startswith("http"):
-            time.sleep(CHECK_TIMEOUT_SEC)
-            if debug:
-                print(f"[i] Check URL: {href}")
-            status_code = check_url_availability(href)
-            if not status_code:
-                if debug:
-                    print(f"[i] Is not available URL: {href}")
-                broken_links.append(href)
+    broken_links = []
+    with_href_tag = _find_href_elements(soup)
+    if debug:
+        print(f"[i] with_href_tag\n\ttotal: {len(with_href_tag)}\n\turls: {with_href_tag}\n", flush=True)
+    broken_links.extend(_check_broken_links(with_href_tag))
+    no_href_tag = _find_plain_elements(soup, search_text="https")
+    if debug:
+        print(f"[i] no_href_tag\n\ttotal: {len(no_href_tag)}\n\turls: {no_href_tag}\n", flush=True)
+    broken_links.extend(_check_broken_links(no_href_tag))
 
     return broken_links
 
