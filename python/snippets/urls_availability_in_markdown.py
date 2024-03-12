@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
-
 __version__ = "1.2"
 __description__ = "Find broken links in a markdown"
 
 import os
 import re
+import sys
 import time
+import traceback
 import urllib.parse as urlparse
 
 import click
@@ -55,12 +55,22 @@ def markdown_to_html(fname):
 
 def check_url_availability(url: str):
     """Checks if a URL is accessible and returns its status code."""
+
+    response, result, message = None, None, None
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=30)
         response.raise_for_status()
-        return response.status_code
-    except requests.exceptions.RequestException as e:
-        return None
+        result, message = response.status_code, "OK"
+    except requests.exceptions.ConnectTimeout as ex:
+        click.echo(traceback.format_exc())
+        result, message = 408, ex
+    except Exception as ex:
+        click.echo(traceback.format_exc())
+        result, message = -1, ex
+        if response is not None:
+            result = response.status_code
+
+    return result, message
 
 
 def _find_urls(text: str):
@@ -106,13 +116,22 @@ def _check_broken_links(urls: list, debug: bool = False) -> list:
         time.sleep(CHECK_TIMEOUT_SEC)
         if debug:
             print(f"[i] Check URL: {url}")
-        status_code = check_url_availability(url)
-        if not status_code:
+
+        status_code, message = check_url_availability(url)
+        if status_code >= 200 and status_code <= 399:
             if debug:
                 print(f"[i] Is not available URL: {url}")
-            broken_links.append(url)
+            broken_links.append({"url": url, "code": status_code, "message": message})
 
     return broken_links
+
+
+def _log_traceback(ex, ex_traceback=None):
+    """Logs exceptions"""
+    if ex_traceback is None:
+        ex_traceback = ex.__traceback__
+    tb_lines = [line.rstrip("\n") for line in traceback.format_exception(ex.__class__, ex, ex_traceback)]
+    print(tb_lines)
 
 
 def find_broken_links(html_page: str, debug: bool = False):
@@ -160,11 +179,25 @@ def check(url):
         if broken_links:
             click.echo("[i] broken links found:")
             for link in broken_links:
-                click.echo(link)
+                click.echo(click.style("=> ", fg="red") + f'{link["code"]}\t{link["url"]}')
         else:
             click.echo("[i] no broken links found!")
     else:
         print(f"[e] markdown file was not downloaded: {fname}")
+
+
+@cli.command()
+@click.option(
+    "--url",
+    prompt=False,
+    required=True,
+    help="The URL of the webpage to use for test ",
+    default="https://raw.githubusercontent.com/vdmitriyev/datasets-links-collection/master/README.md",
+)
+def test(url):
+    code, message = check_url_availability(url)
+    print(code)
+    print(message)
 
 
 if __name__ == "__main__":
