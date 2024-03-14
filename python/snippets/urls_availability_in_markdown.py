@@ -85,10 +85,16 @@ def _find_urls(text: str):
         A list of URLs found in the text.
     """
 
+    urls_final = []
     url_regex = r"""(?i)\b((?:https?://|ftp://|www\.)\S+[^\s.,;?])"""
     urls = re.findall(url_regex, text)
 
-    return urls
+    for item in urls:
+        if item[-1:] == ")":
+            urls_final.append(item[:-1])
+        else:
+            urls_final.append(item)
+    return urls_final
 
 
 def _find_plain_elements(bs_html, search_text: str = "http"):
@@ -186,14 +192,35 @@ def check(url):
 @click.option(
     "--url",
     prompt=False,
-    required=True,
+    required=False,
     help="The URL of the webpage to use for test ",
     default="https://raw.githubusercontent.com/vdmitriyev/datasets-links-collection/master/README.md",
 )
-def test(url):
-    code, message = check_url_availability(url)
-    print(code)
-    print(message)
+@click.option(
+    "--file",
+    prompt=False,
+    required=False,
+    help="The file with urls to be used for test",
+    default="test-urls.txt",
+)
+def test(url: str, file: str):
+
+    if url is not None:
+        code, message = check_url_availability(url)
+        print(code)
+        print(message)
+
+    if file is not None:
+        pass
+
+
+@cli.command()
+def test_regex():
+    test_cases = [
+        "    - [Use JupyterLab with SAP HANA (Express Edition)](https://developers.sap.com/tutorials/mlb-hxe-tools-jupyter.html)"
+    ]
+    for case in test_cases:
+        print(_find_urls(case))
 
 
 if __name__ == "__main__":
