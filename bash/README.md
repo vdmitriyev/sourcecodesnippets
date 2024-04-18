@@ -166,7 +166,11 @@ sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install fish
 ```
-* Make default
+* Make default (own user)
+```
+chsh -s /usr/bin/fish
+```
+* Make default (root)
 ```
 sudo chsh -s /usr/bin/fish
 ```
