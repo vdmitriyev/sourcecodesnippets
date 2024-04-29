@@ -4,72 +4,75 @@ Collection of various bash commands.
 
 ### Bash
 
-* Kill/stop all process with particular port
-
-```
-kill $(ps aux | grep 8888 | awk '{print $2}')
-```
+* Kill/stop all process with particular port    
+    ```
+    kill $(ps aux | grep 8888 | awk '{print $2}')
+    ```
+* Kill/stop all processes star were started by the VS Code via Remote-SSH:
+    ```
+    ps -ef | grep ".vscode-server" | awk '{print $2}' | xargs kill
+    ```
 
 ### Ubuntu (e.g. LTS 18.04) / Disk space problem
 
 * Determine the space available on the disks (**df**)
-```
-sudo df -h
-```
+    ```
+    sudo df -h
+    ```
 * Determine the space available on the disks (**du**)
     + Size on disk
-    ```
-    sudo du -hsc *
-    ```
+        ```
+        sudo du -hsc *
+        ```
     + Real size of files
-    ```
-    sudo du -hbc *
-    ```
+        ```
+        sudo du -hbc *
+        ```
     + Size of a single folder
-    ```
-    sudo du -sh /var
-    ```
+        ```
+        sudo du -sh /var
+        ```
     + Sort output
-    ```
-    sudo du -h | sort -h
-    ```
+        ```
+        sudo du -h | sort -h
+        ```
 * Information about disks
-```
-sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
-```
+    ```
+    sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
+    ```
 
 * Remove some staff
-```
-sudo apt clean # remove cache
-```
+    ```
+    sudo apt clean # remove cache
+    ```
 * Show linenumners in ```nano```
-```bash
-nano -l <file>
-```
+    ```bash
+    nano -l <file>
+    ```
 * Determine number of cores + CPUs
-```
-lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
-```
-```
-echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"
-```
+    ```
+    lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
+    ```
+    ```
+    echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"
+    ```
 
 * List directory as tree (required: ```apt-get install tree```)
-```
-tree .
-tree -a .
-```
+    ```
+    tree .
+    tree -a .
+    ```
 
 * Flush disk cache
-```bash
-sync; echo 3 > /proc/sys/vm/drop_caches
-```
+    ```bash
+    sync; echo 3 > /proc/sys/vm/drop_caches
+    ```
 
 * Shows lines of an output file with grep
-```bash
-grep -n <pattern> <file> 
-cat -n <file> | grep <pattern>
-```
+    ```bash
+    grep -n <pattern> <file> 
+    cat -n <file> | grep <pattern>
+    ```
 * Relevant articles
     - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
     - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
@@ -80,33 +83,33 @@ cat -n <file> | grep <pattern>
 ### Configure ```alias``` for bash
 
 * How to configure alias-es (add the lines to the end of the file)
-```bash
-nano ~/.bashrc
-```
+    ```bash
+    nano ~/.bashrc
+    ```
 * Configure ```ls```
-```bash
-alias ls='ls --time-style=long-iso --color=tty -Altr'
-```
+    ```bash
+    alias ls='ls --time-style=long-iso --color=tty -Altr'
+    ```
 * Color the grep-match for easy reading.
-```bash
-alias grep='grep -inE --color=auto'
-```
+    ```bash
+    alias grep='grep -inE --color=auto'
+    ```
 * Show linenumners in ```nano```
-```bash
-alias nano='nano -l'
-```
+    ```bash
+    alias nano='nano -l'
+    ```
 
 ### bash history
 
 * Execute a command without keeping it in history
-```
-<your_secret_command>; history -d $((HISTCMD-1))
-```
+    ```
+    <your_secret_command>; history -d $((HISTCMD-1))
+    ```
 
 * Execute a command without keeping it in history (can start your session with)
-```
-export HISTFILE=/dev/null ;history -d $(history 1)
-```
+    ```
+    export HISTFILE=/dev/null ;history -d $(history 1)
+    ```
 
 * Relevant articles
     - Execute a command without keeping it in history 
@@ -114,32 +117,32 @@ export HISTFILE=/dev/null ;history -d $(history 1)
 ### Troubleshoot network connection
 
 * Use ```tcpdump``` utility to monitor desired ports
-```bash
-sudo tcpdump port 443 and '(tcp-syn|tcp-ack)!=0'
-```
+    ```bash
+    sudo tcpdump port 443 and '(tcp-syn|tcp-ack)!=0'
+    ```
 * Active TCP connections
-```
-netstat -plunt
-```
+    ```
+    netstat -plunt
+    ```
 * Display all active Internet connections
-```
-netstat -natp
-```
+    ```
+    netstat -natp
+    ```
 
 ### zsh
 
 * Install
-```
-sudo apt install zsh
-```
+    ```
+    sudo apt install zsh
+    ```
 * Make default
-```
-chsh -s $(which zsh)
-```
+    ```
+    chsh -s $(which zsh)
+    ```
 * Check if worked
-```
-$SHELL --version
-```
+    ```
+    $SHELL --version
+    ```
 * Install and use [ohmyzsh](https://ohmyz.sh/)
 * Relevant articles
     + https://github.com/ohmyzsh/ohmyzsh
@@ -153,27 +156,27 @@ $SHELL --version
  #### zsh - issues
  
 Fix issues with keys by editing ```nano ~/.zshrc```
- ```text
-bindkey  "^[[H"   beginning-of-line
-bindkey  "^[[F"   end-of-line
-```
+     ```text
+    bindkey  "^[[H"   beginning-of-line
+    bindkey  "^[[F"   end-of-line
+    ```
 
 ### fish
 
 * Install
-```
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install fish
-```
+    ```
+    sudo apt-add-repository ppa:fish-shell/release-3
+    sudo apt-get update && sudo apt-get upgrade
+    sudo apt-get install fish
+    ```
 * Make default (own user)
-```
-chsh -s /usr/bin/fish
-```
+    ```
+    chsh -s /usr/bin/fish
+    ```
 * Make default (root)
-```
-sudo chsh -s /usr/bin/fish
-```
+    ```
+    sudo chsh -s /usr/bin/fish
+    ```
 * Materials
     - https://fishshell.com/docs/3.0/tutorial.html#:~:text=Switching%20to%20fish%3F,usr%2Flocal%2Fbin%2Ffish
     - https://dev.to/iqium/install-fish-shell-on-ubuntu-2204-3337
