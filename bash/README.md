@@ -128,6 +128,11 @@ Collection of various bash commands.
     ```
     netstat -natp
     ```
+* Find out processes that uses paricular port
+    ```
+    netstat -nlp | grep ':80'
+    ```
+
 
 ### zsh
 
