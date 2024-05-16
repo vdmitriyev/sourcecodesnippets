@@ -1,3 +1,5 @@
+[toc]
+
 ### About
 
 Collection of various bash commands.
@@ -13,7 +15,47 @@ Collection of various bash commands.
     ps -ef | grep ".vscode-server" | awk '{print $2}' | xargs kill
     ```
 
-### Ubuntu (e.g. LTS 18.04) / Disk space problem
+### Ubuntu: various bash commands
+
+* Show linenumners in ```nano```
+    ```bash
+    nano -l <file>
+    ```
+    
+* Determine number of cores + CPUs
+    ```
+    lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
+    ```
+    ```
+    echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"
+    ```
+
+* List directory as tree (required: ```apt-get install tree```)
+    ```
+    tree .
+    tree -a .
+    ```
+
+* Flush disk cache
+    ```bash
+    sync; echo 3 > /proc/sys/vm/drop_caches
+    ```
+
+* Shows lines of an output file with grep
+    ```bash
+    grep -n <pattern> <file> 
+    cat -n <file> | grep <pattern>
+    ```
+
+### Ubuntu: Configure locale
+
+* To change locale do the following
+    ```
+    sudo locale-gen en_US.utf8
+    sudo update-locale LANG=en_US.utf8
+    ```
+
+### Ubuntu: disk space problem (e.g., LTS 18.04)
 
 * Determine the space available on the disks (**df**)
     ```
@@ -45,40 +87,14 @@ Collection of various bash commands.
     ```
     sudo apt clean # remove cache
     ```
-* Show linenumners in ```nano```
-    ```bash
-    nano -l <file>
-    ```
-* Determine number of cores + CPUs
-    ```
-    lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
-    ```
-    ```
-    echo "Cores = $(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"
-    ```
+        
+#### Ubuntu: Relevant articles
 
-* List directory as tree (required: ```apt-get install tree```)
-    ```
-    tree .
-    tree -a .
-    ```
-
-* Flush disk cache
-    ```bash
-    sync; echo 3 > /proc/sys/vm/drop_caches
-    ```
-
-* Shows lines of an output file with grep
-    ```bash
-    grep -n <pattern> <file> 
-    cat -n <file> | grep <pattern>
-    ```
-* Relevant articles
-    - https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
-    - https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
-    - https://unix.stackexchange.com/questions/218074/how-to-know-number-of-cores-of-a-system-in-linux
-    - https://unix.stackexchange.com/questions/19480/how-to-display-line-number-while-doing-grep-on-a-file
-    - https://www.tecmint.com/learn-nano-text-editor-in-linux/
+* https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
+* https://askubuntu.com/questions/343066/how-to-delete-a-non-working-kernel-after-update
+* https://unix.stackexchange.com/questions/218074/how-to-know-number-of-cores-of-a-system-in-linux
+* https://unix.stackexchange.com/questions/19480/how-to-display-line-number-while-doing-grep-on-a-file
+* https://www.tecmint.com/learn-nano-text-editor-in-linux/
 
 ### Configure ```alias``` for bash
 
@@ -98,7 +114,7 @@ Collection of various bash commands.
     ```bash
     alias nano='nano -l'
     ```
-
+    
 ### bash history
 
 * Execute a command without keeping it in history
@@ -132,7 +148,6 @@ Collection of various bash commands.
     ```
     netstat -nlp | grep ':80'
     ```
-
 
 ### zsh
 
