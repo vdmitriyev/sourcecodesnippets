@@ -12,7 +12,7 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
 * CodeSnap, DotENV, Rainbow CSV, indent-rainbow
 * Jupyter, Jupyter Cell Tags, Jupyter Keymap, Jupyter Notebook Renderers, Jupyter Slide Show
 * LaTeX Workshop
-* Markdown PDF, Markdown PDF
+* **Markdown**: Markdown PDF, Markdown PDF, Markdown Preview Mermaid Support****
 * YAML
 
 #### Docs/Options for the VS Code extensions
