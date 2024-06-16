@@ -1,6 +1,7 @@
 ## About
 
 Collection of extensions and further tips for [VS Code](https://code.visualstudio.com/).
+
 To directly edit ```settings.json``` use in search pannel ```Preferences: Open User Settings (JSON)``` 
 
 ## VS Code: Extensions
