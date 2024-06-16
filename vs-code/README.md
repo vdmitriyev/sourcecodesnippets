@@ -1,6 +1,7 @@
 ## About
 
 Collection of extensions and further tips for [VS Code](https://code.visualstudio.com/).
+To directly edit ```settings.json``` use in search pannel ```Preferences: Open User Settings (JSON)``` 
 
 ## VS Code: Extensions
 
@@ -13,8 +14,10 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
 * Jupyter, Jupyter Cell Tags, Jupyter Keymap, Jupyter Notebook Renderers, Jupyter Slide Show
 * LaTeX Workshop
 * **Markdown**
-    + Markdown PDF, Markdown PDF, Markdown Preview Mermaid Support
+    + Markdown PDF
+    + Markdown Preview Mermaid Support
 * YAML
+* **Todo Tree**
 
 #### Docs/Options for the VS Code extensions
 
@@ -31,6 +34,8 @@ Collection of extensions and further tips for [VS Code](https://code.visualstudi
 * REST Client
 * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 * [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
+* [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+    - [Best way to work with TODOs in VSCode](https://thomasventurini.com/articles/the-best-way-to-work-with-todos-in-vscode/)
 
 ## VS Code: How to debug a Python module
 
