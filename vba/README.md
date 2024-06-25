@@ -1,8 +1,8 @@
 ### About
 
-Collection of various VBA scripts. Some additional MS Office ticks can be found [here](ms-office-tricks.md).
+Collection of various VBA scripts and additional MS Office ticks/hints.
 
-### Collection Description
+### VBA Scripts Collection
 
 * [checkspelling.vb](checkspelling.vb)
 	- Change languages spell checker configurations to other language (for instance - English)
@@ -17,7 +17,14 @@ Collection of various VBA scripts. Some additional MS Office ticks can be found 
 
 ### MS Office Tricks
 
-[MS Office Tricks](ms-office-tricks.md)
+A number of various MS Office tricks and tips (Powerpoint, Visio, etc.)
+
+* [How to change the export resolution of a PowerPoint slide Print Print Email Email](http://support.microsoft.com/en-us/kb/827745)
+* [Visio 2010: Exporting Visio 2010 Diagrams to PowerPoint 2010](https://code.msdn.microsoft.com/office/Visio-2010-Exporting-Visio-dd07f270)
+	- This solution require following tools:
+		+ Visual Studio 2010
+		+ Vision 2010
+		+ Office Tools Installed
 
 ### Credits
 
