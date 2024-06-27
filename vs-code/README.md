@@ -60,4 +60,8 @@ Example of the ```launch.json``` to debug module (see sections: ```args```, ```m
 
 ## VS Code: Keyboard Shortcuts / Keybindings
 
-* Toggle sidebar visibility / hide explorer: **Ctrl+B**
+* Toggle sidebar visibility / hide explorer:
+    - **Ctrl+B**
+* Switch focus between editor and terminal:
+    - **Ctrl + \`** -> focuces on terminal (*\`* -> backtick key)
+    - **Ctrl + 1** -> focuces on editor
