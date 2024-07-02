@@ -2,7 +2,7 @@
 
 Collection of extensions and further tips for [VS Code](https://code.visualstudio.com/).
 
-To directly edit ```settings.json``` use in search pannel ```Preferences: Open User Settings (JSON)``` 
+To directly edit ```settings.json``` use in search pannel ```Preferences: Open User Settings (JSON)```. Details are in [VS Code: How to Add Custom Keybindings](#vs-code-how-to-add-custom-keybindings)
 
 ## VS Code: Extensions
 
