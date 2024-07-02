@@ -57,6 +57,25 @@ Example of the ```launch.json``` to debug module (see sections: ```args```, ```m
 ```
 
 
+## VS Code: How to Add Custom Keybindings
+
+Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
+```json
+// Place your key bindings in this file to override the defaults
+[
+  // Terminal
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  }
+]
+```
 
 ## VS Code: Keyboard Shortcuts / Keybindings
 
@@ -65,3 +84,6 @@ Example of the ```launch.json``` to debug module (see sections: ```args```, ```m
 * Switch focus between editor and terminal:
     - **Ctrl + \`** -> focuces on terminal (*\`* -> backtick key)
     - **Ctrl + 1** -> focuces on editor
+* Switch between opened terminal in VS COde
+   - **Ctrl + Shift + a** -> requires custom key bindings
+ 
