@@ -9,9 +9,6 @@ Collection of links and materials grouped into various topics
     - [TCPView](https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview)
     - [ZoomIt](https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit)
     - [ConEmu](https://conemu.github.io/)
-* Articles/Blogs
-    - [Get started using Hadoop with Hive in HDInsight to analyze mobile handset use](http://azure.microsoft.com/en-us/documentation/articles/hdinsight-get-started/)
-    - [Modeling the Architecture of a Software System](http://msdn.microsoft.com/en-us/library/vstudio/dd490886.aspx)
 
 ## Network
 
@@ -27,22 +24,17 @@ Collection of links and materials grouped into various topics
 
 * [10 Lesser Known Linux Terminal Tricks](https://linoxide.com/linux-how-to/lesser-known-linux-terminal-tricks/) #linux #terminal
 * [Bash Scripting Tutorial](http://linuxconfig.org/bash-scripting-tutorial)
-* [Collection of Data Mining Startups](https://angel.co/data-mining)
 
-### Databases (PostgreSQL)
 
-* [Postgres Database Health Check Notebook](https://github.com/Azure/azure-postgresql/blob/master/samples/Health%20Checks/Postgres_database_health_check_notebook.ipynb)
 
-## R
-
-### R Related Materials
+## R Related Materials
 
 * [R-bloggers](http://R-bloggers.com/)
 * [codeschool](http://tryr.codeschool.com/)
 * [R-bloggers: Guide](http://www.r-bloggers.com/the-guerilla-guide-to-r/)
 * [Introduction to Data Analysis using R](http://bigdatauniversity.com/bdu-wp/bdu-course/introduction-to-data-analysis-using-r/)
 
-## Study (MOOC)
+## Study (MOOCs)
 
 ### Coursera
 
@@ -60,22 +52,15 @@ Collection of links and materials grouped into various topics
     - [Global Sustainable Energy: Past, Present and Future](https://class.coursera.org/globalenergy-001/class/index)
     - [High Performance Scientific Computing](https://class.coursera.org/scicomp-001/class/index)
     - [Metadata: Organizing and Discovering Information](https://class.coursera.org/metadata-001/class)
-* Done
+* Completed
     - [Machine Learning](https://class.coursera.org/ml-004/class/index)
     - [Introduction to Data Science](https://class.coursera.org/datasci-001/class/index)
     - [Learn to Program: Crafting Quality Code](https://class.coursera.org/programming2-001/class/index)
     - [Web Intelligence and Big Data](https://class.coursera.org/bigdata-002/class/index)
 
-### openHPI and open SAP
+## openHPI and open SAP
 
-* Future
-* Interesting
-    - [ABAP Development for SAP HANA](https://open.sap.com/courses/a4h1)
-    - [Introduction to Mobile Solution Development](https://open.sap.com/courses/3/progress)
-    - [SAP Business Suite powered by SAP HANA](https://open.sap.com/courses/12/wiki/week-1-welcome?module_item_id=658)
-    - [Next Steps in SAP HANA Cloud Platform](https://open.sap.com/course/hanacloud2#)
-    - [In-Memory Data Management 2012|2013|2014](https://openhpi.de/courses/8/wiki/welcome)
-* Done
+* Completed
     - [Introduction to Software Development on SAP HANA](https://open.sap.com/course/hana1)
     - [Next Steps in Software Development on SAP HANA](https://open.sap.com/courses/hana2)
     - [An Introduction to SAP HANA by Dr. Vishal Sikka](https://open.sap.com/course/hanaintro1)
@@ -85,7 +70,7 @@ Collection of links and materials grouped into various topics
 * Interesting
     - [StatLearning](https://class.stanford.edu/courses/HumanitiesScience/StatLearning/Winter2014/info)
     - [CVX101: Convex Optimization](https://class.stanford.edu/courses/Engineering/CVX101/Winter2014/about)
-* Done
+* Completed
     - [Writing in the Sciences](https://class.stanford.edu/courses/Medicine/SciWrite/Fall2013/info)
 
 ### Udacity
@@ -115,10 +100,6 @@ Collection of links and materials grouped into various topics
     - [Курс | Теория принятия решений](http://postnauka.ru/courses/28275) #out-of-topic
 * Done
     - [[Stepic] Алгоритмы и структуры данных](https://stepic.org/course/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B-%D0%B8-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-63/syllabus)
-
-### Webinars
-
-* [Вебинары Positive Technologies: образовательная программа "Практическая безопасность"](http://www.ptsecurity.ru/lab/webinars/#) #webinars #out-of-topic #security
 
 ## Writing - Tools and Techniques
 
@@ -157,11 +138,6 @@ Collection of links and materials grouped into various topics
 * [Кремниевая Долина - враг общества № 1, или 32 урока от журналиста TechCrunch](http://yvision.kz/post/426586) #out-of-topic
     - Interview with good advices on how to write a good quality articles #note
 
-### Soft
-
-* [ngrok- Introspected tunnels to localhost](https://ngrok.com/)
-* [angular-gantt - Gantt chart component for AngularJS](https://www.angular-gantt.com/demo/) #web #js #tool #gantt #diagram #out-of-topic
-
 ### Design, HTML, CSS, JS
 
 * [A collection of 844 free CSS and HTML5 site templates, designed & built by Cherry + AJ and released under the Creative Commons](http://templated.co/) #web #html #templates #out-of-topic
@@ -169,13 +145,3 @@ Collection of links and materials grouped into various topics
     - [Material Design on Github](https://github.com/google/material-design-icons) #link #source #src
     - [Ico Moon.io](https://icomoon.io/app/#/select) #link #source
 
-### Random Articles and Resources
-
-* http://cloudcomputing.blogspot.de/
-* [Inside System Storage -- by Tony Pearson](https://www.ibm.com/developerworks/mydeveloperworks/blogs/InsideSystemStorage/?lang=en)
-* [Video: Violin Memory’s Flash Memory Arrays](http://www.datacenterknowledge.com/archives/2012/12/12/video-violin-memorys-flash-memory-arrays/)
-* [A Quick Introduction to UML Sequence Diagrams](http://www.tracemodeler.com/articles/a_quick_introduction_to_uml_sequence_diagrams/)
-* [Data Sampling Methods in Python](https://github.com/aosabook/500lines/tree/master/sampler) #data #sampling #probability
-* [Visualising data structures and algorithms through animation](http://visualgo.net/)
-* [SpiderFoot is an open source intelligence automation tool. Its goal is to automate the process of gathering intelligence about a given target.](http://www.spiderfoot.net/info/)
-* [A virtual machine designed for programming workshops](https://github.com/jpadilla/juicebox)
