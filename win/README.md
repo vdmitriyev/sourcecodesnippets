@@ -27,6 +27,17 @@ Initial ideas are from [stackoverflow](https://stackoverflow.com/questions/20530
    ```
 * Copy bat files from [.aliases](.aliases) to the newly created directory
 
+### ON using `make` on Windows
+
+* It is generally possible to use make with [MSYS2](https://github.com/vdmitriyev/learn-golang#gcc-minwg-etc-on-windows)
+* How to `start` `bash-terminal` after MSYS2 installation into ```C:\\Compilers\msys64\\```
+	```
+	C:\\Compilers\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell bash
+	```
+* However, `make` will not work properly on Windows host (many workaround required)
+* Alternative: use [taskfile](https://taskfile.dev/) to create make-like tasks using YML
+
+
 ### Interesting and useful articles and ideas
 
 * [It's time for you to install Windows Terminal](https://www.hanselman.com/blog/its-time-for-you-to-install-windows-terminal)
