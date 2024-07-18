@@ -7,7 +7,9 @@ snippets/gist-comments.md
 
 # extensions
 *.csv
+*.txt
 snippets/*.txt
+windows/*.txt
 
 # folders
 **/.ipynb_checkpoints

@@ -7,6 +7,8 @@ This is a collection of a various Python scripts and helper information.
 * [windows](windows)
     - Script to create virtualenv from requirements.txt
     - Script to start and use virtualenv
+* [helpers](helpers)
+    - `cmdUninstallGlobalPackages.bat` helps to uninstall globally installed pacakges
 
 ### Scripts Collection and Subfolders
 
