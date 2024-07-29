@@ -50,6 +50,11 @@ python -c "import sys; print ('\n'.join(sys.path))"
 python3 -c "import sys; print ('\n'.join(sys.path))"
 ```
 
+* Check if virtual environment is active
+```
+python -c "import sys; print('virtualenv is active' if sys.prefix != sys.base_prefix else 'virtualenv is NOT active')"
+```
+
 ## Starting Simple Python Web Server
 
 * Python 2
