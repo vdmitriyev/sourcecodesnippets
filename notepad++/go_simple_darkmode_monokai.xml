@@ -9,33 +9,67 @@ Credits:
 HEX colors:
 	# link -> https://gist.github.com/r-malon/8fc669332215c8028697a0bbfbfbb32a
 //-->
-
 <NotepadPlus>
-    <UserLang name="go (simple, dark mode, monokai)" ext="go"  darkModeTheme="yes" udlVersion="2.1">
+    <UserLang name="go (simple, dark mode, monokai)" ext="go" darkModeTheme="yes" udlVersion="2.1">
         <Settings>
             <Global caseIgnored="no" allowFoldOfComments="no" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
         </Settings>
         <KeywordLists>
             <Keywords name="Comments">00// 01 02 03/* 04*/</Keywords>
             <Keywords name="Numbers, prefix1"></Keywords>
-            <Keywords name="Operators1">( ) [ ] { } ... . , _ &amp; ^ %  &gt; &lt; ! = + - *  | :</Keywords>
-            <Keywords name="Keywords1">append break cap case close complex const continue copy default else fallthrough false for func go goto if iota imag import len make new package print println range real recover return select switch true var</Keywords>
-            <Keywords name="Keywords2">bool byte complex128 complex64 float32 float64 int int16 int32 int64 int8 uint uint16 uint32 uint64 uint8 uintptr chan string map</Keywords>
-			<Keywords name="Keywords3">type struct interface</Keywords>
-			<Keywords name="Keywords4">err nil error panic _ defer</Keywords>
-            <Keywords name="Delimiters1">00&quot; 01 02&quot; 03` 04 05` 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 </Keywords>
+            <Keywords name="Numbers, prefix2"></Keywords>
+            <Keywords name="Numbers, extras1"></Keywords>
+            <Keywords name="Numbers, extras2"></Keywords>
+            <Keywords name="Numbers, suffix1"></Keywords>
+            <Keywords name="Numbers, suffix2"></Keywords>
+            <Keywords name="Numbers, range"></Keywords>
+            <Keywords name="Operators1">( ) [ ] { } ... . , _ &amp; ^ % &gt; &lt; ! = + - * | :</Keywords>
+            <Keywords name="Operators2"></Keywords>
+            <Keywords name="Folders in code1, open"></Keywords>
+            <Keywords name="Folders in code1, middle"></Keywords>
+            <Keywords name="Folders in code1, close"></Keywords>
+            <Keywords name="Folders in code2, open"></Keywords>
+            <Keywords name="Folders in code2, middle"></Keywords>
+            <Keywords name="Folders in code2, close"></Keywords>
+            <Keywords name="Folders in comment, open"></Keywords>
+            <Keywords name="Folders in comment, middle"></Keywords>
+            <Keywords name="Folders in comment, close"></Keywords>
+            <Keywords name="Keywords1">append break cap case close complex const continue copy default else fallthrough false for go goto if iota imag import len make new package print println range real recover return select switch true var</Keywords>
+            <Keywords name="Keywords2">bool byte complex128 complex64 float32 float64 int int16 int32 int64 int8 uint uint16 uint32 uint64 uint8 uintptr chan string map type struct interface error</Keywords>
+            <Keywords name="Keywords3">err nil panic _ defer</Keywords>
+            <Keywords name="Keywords4">func</Keywords>
+            <Keywords name="Keywords5"></Keywords>
+            <Keywords name="Keywords6"></Keywords>
+            <Keywords name="Keywords7"></Keywords>
+            <Keywords name="Keywords8"></Keywords>
+            <Keywords name="Delimiters">00 01 02 03(&quot; 04 05&quot; 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
         </KeywordLists>
-		 <Styles>
-			<WordsStyle name="DEFAULT" fgColor="E3E7F0" bgColor="282C34" colorStyle="0" fontName="" fontStyle="0" nesting="0" />
-			<WordsStyle name="COMMENTS" fgColor="646C7C" bgColor="282C34" colorStyle="1" fontName="" fontStyle="2" nesting="0" />
-			<WordsStyle name="LINE COMMENTS" fgColor="646C7C" bgColor="282C34" colorStyle="1" fontName="" fontStyle="1" nesting="0" />
-			<WordsStyle name="NUMBERS" fgColor="C678DD" bgColor="282C34" colorStyle="1" fontName="" fontStyle="0" nesting="0" />
-			<WordsStyle name="KEYWORDS1" fgColor="E5C07B" bgColor="282C34" colorStyle="1" fontName="" fontStyle="0" nesting="0" />
-			<WordsStyle name="KEYWORDS2" fgColor="B05279" bgColor="282C34" colorStyle="1" fontName="" fontStyle="1" nesting="0" />
-			<WordsStyle name="KEYWORDS3" fgColor="B4D273" bgColor="282C34" colorStyle="1" fontName="" fontStyle="2" nesting="0" />
-			<WordsStyle name="KEYWORDS4" fgColor="E87D3E" bgColor="282C34" colorStyle="1" fontName="" fontStyle="2" nesting="0" />			
-			<WordsStyle name="OPERATORS" fgColor="DFC47D" bgColor="282C34" colorStyle="1" fontName="" fontStyle="1" nesting="0" />
-			<WordsStyle name="DELIMITERS1" fgColor="e5b567" bgColor="282C34" colorStyle="1" fontName="" fontStyle="2" nesting="0" />
-		</Styles>
+        <Styles>
+            <WordsStyle name="DEFAULT" fgColor="E3E7F0" bgColor="282C34" colorStyle="0" fontStyle="0" nesting="0" />
+            <WordsStyle name="COMMENTS" fgColor="646C7C" bgColor="282C34" colorStyle="1" fontStyle="2" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="646C7C" bgColor="282C34" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="NUMBERS" fgColor="C678DD" bgColor="282C34" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="E5C07B" bgColor="282C34" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS2" fgColor="B05279" bgColor="282C34" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="E87D3E" bgColor="282C34" colorStyle="1" fontStyle="2" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="E87D3E" bgColor="282C34" colorStyle="1" fontStyle="3" nesting="0" />
+            <WordsStyle name="OPERATORS" fgColor="DFC47D" bgColor="282C34" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="E5B567" bgColor="282C34" colorStyle="1" fontStyle="2" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS6" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS8" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE1" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE2" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN COMMENT" fgColor="000040" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="B4D273" bgColor="282C34" colorStyle="1" fontStyle="2" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS6" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS7" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS8" fgColor="E3E7F0" bgColor="282C34" fontStyle="0" nesting="0" />
+        </Styles>
     </UserLang>
 </NotepadPlus>
