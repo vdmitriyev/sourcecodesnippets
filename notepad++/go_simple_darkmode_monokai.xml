@@ -35,10 +35,10 @@ HEX colors:
             <Keywords name="Folders in comment, open"></Keywords>
             <Keywords name="Folders in comment, middle"></Keywords>
             <Keywords name="Folders in comment, close"></Keywords>
-            <Keywords name="Keywords1">append break cap case close complex const continue copy default else fallthrough false for go goto if iota imag import len make new package print println range real recover return select switch true var</Keywords>
-            <Keywords name="Keywords2">bool byte complex128 complex64 float32 float64 int int16 int32 int64 int8 uint uint16 uint32 uint64 uint8 uintptr chan string map type struct interface error</Keywords>
-            <Keywords name="Keywords3">err nil panic _ defer</Keywords>
-            <Keywords name="Keywords4">func</Keywords>
+            <Keywords name="Keywords1">append break cap case close complex const continue copy default else fallthrough false for go goto if iota imag import len make new package print println range real recover select switch true var</Keywords>
+            <Keywords name="Keywords2">bool byte complex128 complex64 float32 float64 int int16 int32 int64 int8 uint uint16 uint32 uint64 uint8 uintptr chan string map type struct interface error nil</Keywords>
+            <Keywords name="Keywords3">err panic _ defer</Keywords>
+            <Keywords name="Keywords4">func return</Keywords>
             <Keywords name="Keywords5"></Keywords>
             <Keywords name="Keywords6"></Keywords>
             <Keywords name="Keywords7"></Keywords>
