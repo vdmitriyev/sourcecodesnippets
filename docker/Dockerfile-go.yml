@@ -1,0 +1,26 @@
+FROM ubuntu:latest
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    wget \
+    tar \
+    curl
+
+# Download and install Go
+ENV GOLANG_VERSION 1.23.0
+ENV GOLANG_DOWNLOAD_URL https://go.dev/dl/go$GOLANG_VERSION.linux-amd64.tar.gz
+ENV GOLANG_DOWNLOAD_SHA256 905a297f19ead44780548933e0ff1a1b86e8327bb459e92f9c0012569f76f5e3
+
+RUN wget -qO- $GOLANG_DOWNLOAD_URL | tar xvz -C /usr/local --strip-components=1
+    #&& echo "$GOLANG_DOWNLOAD_SHA256  /usr/local/go/bin/go" | sha256sum -c - \
+    #&& mkdir -p /root/go \
+    #&& chown root:root /root/go
+
+ENV PATH $PATH:/usr/local/go/bin
+
+# Create a working directory for your Go project
+RUN mkdir -p /app
+WORKDIR /app
+
+RUN go version
+RUN go install github.com/melkeydev/go-blueprint@latest
