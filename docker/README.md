@@ -17,4 +17,3 @@ Collection of `docker compose` files for various needs.
 		```
 		docker compose -f docker-compose-go.yml exec go-cli-bundle bash 
 		```
-	
