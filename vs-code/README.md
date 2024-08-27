@@ -19,6 +19,9 @@ To directly edit ```settings.json``` use in search pannel ```Preferences: Open U
     + Markdown Preview Mermaid Support
 * YAML
 * **Todo Tree**
+* Go
+    + templ-vscode
+    
 
 #### Docs/Options for the VS Code extensions
 
@@ -56,7 +59,6 @@ Example of the ```launch.json``` to debug module (see sections: ```args```, ```m
 }
 ```
 
-
 ## VS Code: How to Add Custom Keybindings
 
 Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
@@ -75,6 +77,16 @@ Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
     "when": "terminalFocus"
   }
 ]
+```
+
+## VS Code: templ (golang)
+```
+{
+    "[templ]": {
+        "editor.defaultFormatter": "a-h.templ",
+		"editor.formatOnSave": true
+    },
+}
 ```
 
 ## VS Code: Keyboard Shortcuts / Keybindings
