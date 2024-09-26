@@ -198,8 +198,8 @@ pip config set global.require-virtualenv True
             - https://github.com/psf/black 	
             - https://github.com/pypa/pip-audit
                 - Runs slow
-        + Wroking example:
-            - https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
+* `pre-commit` wroking example:
+    + https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
 * isort
     + https://github.com/pycqa/isort
     + VS Code Extension + Config
@@ -208,6 +208,7 @@ pip config set global.require-virtualenv True
     +  https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
 * Materials
     - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
+    - [How to Set Up Pre-Commit Hooks](https://stefaniemolin.com/articles/devx/pre-commit/setup-guide/)
 
 ## Author
 
