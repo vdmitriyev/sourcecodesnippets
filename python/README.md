@@ -200,6 +200,7 @@ pip config set global.require-virtualenv True
                 - Runs slow
 * `pre-commit` wroking example:
     + https://github.com/vdmitriyev/msconsconverter/blob/master/.pre-commit-config.yaml
+    + `pre-commit` by default places its repository store in `~/.cache/pre-commit`
 * isort
     + https://github.com/pycqa/isort
     + VS Code Extension + Config
