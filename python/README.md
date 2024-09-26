@@ -175,7 +175,7 @@ pip config set global.require-virtualenv True
         ```
         pre-commit sample-config
         ``` 
-    + Create empty config file
+    + Create empty config file and copt sample config (`pre-commit sample-config`)
         ```
         touch .pre-commit-config.yaml
         ```
