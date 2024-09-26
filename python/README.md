@@ -10,7 +10,20 @@ This is a collection of a various Python scripts and helper information.
 * [helpers](helpers)
     - `cmdUninstallGlobalPackages.bat` helps to uninstall globally installed pacakges
 
-### Scripts Collection and Subfolders
+## Global dependencides
+
+**Virtual environments are highly recommended for Python development and must be used by default.** However, in certain cases, it's beneficial to install some Python packages globally:
+
+* Extremely fast Python package installer and resolver
+	```bash
+	pip install --upgrade uv
+	```
+* Multi-language pre-commit hooks for Git
+	```bash
+	pip install --upgrade pre-commit
+	```
+
+## Scripts Collection and Subfolders
 
 Located in subdirectory [snippets](snippets)
 
