@@ -166,20 +166,19 @@ pip config set global.require-virtualenv True
 
 ## Python Code Quality
 
-* Base article - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
 * [pre-commit](https://pre-commit.com/#install)
     + Install
         ```
-        pip install pre-commit
-        ```
-    + Create empty config file
-        ```
-        touch .pre-commit-config.yaml
+        pip install --upgrade pre-commit
         ```
     + View sample config
         ```
         pre-commit sample-config
         ``` 
+    + Create empty config file
+        ```
+        touch .pre-commit-config.yaml
+        ```
     + Install the git hook scripts: 
         ```
         pre-commit install
@@ -187,6 +186,10 @@ pip config set global.require-virtualenv True
     + Run manually: 
         ```
         pre-commit run --all-files
+        ```
+    + Bypass pre-commit hooks in git
+        ```bash
+        git commit -m "will fix asap" --no-verify
         ```
     + Add further plugins
         + Overview
@@ -203,6 +206,8 @@ pip config set global.require-virtualenv True
         - https://marketplace.visualstudio.com/items?itemName=ms-python.isort
 * Black Formatter
     +  https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
+* Materials
+    - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
 
 ## Author
 
