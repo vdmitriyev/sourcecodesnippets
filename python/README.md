@@ -211,6 +211,21 @@ pip config set global.require-virtualenv True
     - [Boring Python: code quality](https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/)
     - [How to Set Up Pre-Commit Hooks](https://stefaniemolin.com/articles/devx/pre-commit/setup-guide/)
 
+## Global `.gitignore` (`.gitignore_global`)
+
+* https://gist.github.com/subfuzion/db7f57fff2fb6998a16c
+* Create a new file `%USERPROFILE%\.gitignore_global`
+* Add what you want to ignore globally in git
+* Config git to find global gitignore file:
+    ```
+    git config --global core.excludesfile "%USERPROFILE%\.gitignore_global"
+    ```
+* Verify by checking file `%USERPROFILE%\.gitconfig`
+    ```
+    cat %USERPROFILE%\.gitconfig
+    ```
+
+
 ## Author
 
 * Viktor Dmitriyev
