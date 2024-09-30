@@ -3,7 +3,7 @@ REM @author Viktor Dmitriyev
 
 REM
 REM CHANGE THE LOCATIONS !!!!
-REM  
+REM
 
 echo "Starting copying files from various folders ... "
 

@@ -6,7 +6,7 @@ Collection of various bash commands.
 
 ### Bash
 
-* Kill/stop all process with particular port    
+* Kill/stop all process with particular port
     ```
     kill $(ps aux | grep 8888 | awk '{print $2}')
     ```
@@ -21,7 +21,7 @@ Collection of various bash commands.
     ```bash
     nano -l <file>
     ```
-    
+
 * Determine number of cores + CPUs
     ```
     lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
@@ -43,7 +43,7 @@ Collection of various bash commands.
 
 * Shows lines of an output file with grep
     ```bash
-    grep -n <pattern> <file> 
+    grep -n <pattern> <file>
     cat -n <file> | grep <pattern>
     ```
 
@@ -87,7 +87,7 @@ Collection of various bash commands.
     ```
     sudo apt clean # remove cache
     ```
-        
+
 #### Ubuntu: Relevant articles
 
 * https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
@@ -114,7 +114,7 @@ Collection of various bash commands.
     ```bash
     alias nano='nano -l'
     ```
-    
+
 ### bash history
 
 * Execute a command without keeping it in history
@@ -128,8 +128,8 @@ Collection of various bash commands.
     ```
 
 * Relevant articles
-    - Execute a command without keeping it in history 
-    
+    - Execute a command without keeping it in history
+
 ### Troubleshoot network connection
 
 * Use ```tcpdump``` utility to monitor desired ports
@@ -172,9 +172,9 @@ Collection of various bash commands.
     + Check option: ```Terminal > Keyboard > Initial state of numeric pad > Normal```
     + Materials
         + https://kb.iu.edu/d/axpf
- 
+
  #### zsh - issues
- 
+
 Fix issues with keys by editing ```nano ~/.zshrc```
      ```text
     bindkey  "^[[H"   beginning-of-line
@@ -218,6 +218,3 @@ Fix issues with keys by editing ```nano ~/.zshrc```
 * ```exa``` -> ls alternative
     - have to be compiled on Ubuntu
     - https://github.com/ogham/exa
-
-
-    

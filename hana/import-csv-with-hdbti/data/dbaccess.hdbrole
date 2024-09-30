@@ -1,5 +1,5 @@
 role <YOUR_USER_NAME_WITHOUT_TRIAL>trial.<YOUR-XS-PROJECT>.data::dbaccess {
-	
+
           sql object <YOUR_USER_NAME_WITHOUT_TRIAL>trial.<YOUR-XS-PROJECT>.data::tbl_boston_housing: SELECT, INSERT, UPDATE;
 		  sql object <YOUR_USER_NAME_WITHOUT_TRIAL>trial.<YOUR-XS-PROJECT>.data::inhabitants: SELECT, INSERT, UPDATE;
 }

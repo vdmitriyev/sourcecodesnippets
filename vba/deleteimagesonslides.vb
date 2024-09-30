@@ -6,7 +6,7 @@ Public Sub DeleteImagesOnSlides()
     Dim p As Long
     For j = 1 To scount
         fcount = ActivePresentation.Slides(j).Shapes.Count
-        
+
         For p = fcount To 1 Step -1
             If ActivePresentation.Slides(j).Shapes(p).Type = msoPicture Then
 			ActivePresentation.Slides(j).Shapes(p).Delete
@@ -14,5 +14,3 @@ Public Sub DeleteImagesOnSlides()
         Next p
     Next j
 End Sub
-
-

@@ -6,7 +6,7 @@ Contains informatio on LaTeX. For exampole, how to compile **tex** files with te
 
 * https://overleaf.com/
 	+ whenerver its possible, try to use this particular LaTeX editor
-	
+
 ### TexStudio: Command for compiling tex file
 
 Options -> Configure TexStudio -> Commands -> PdfLatex

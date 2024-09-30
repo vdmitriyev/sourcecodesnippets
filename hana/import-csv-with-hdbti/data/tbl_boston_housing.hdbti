@@ -2,7 +2,7 @@ import = [
             {
                 table = "<YOUR_USER_NAME_WITHOUT_TRIAL>trial.<YOUR-XS-PROJECT>.data::tbl_boston_housing";
                 schema = "<YOUR-NEO-SCHEMA-NAME>";
-                file = "<YOUR_USER_NAME_WITHOUT_TRIAL>trial.<YOUR-XS-PROJECT>.data:tbl_boston_housing.csv"; 
+                file = "<YOUR_USER_NAME_WITHOUT_TRIAL>trial.<YOUR-XS-PROJECT>.data:tbl_boston_housing.csv";
                 header = true;
             }
          ];

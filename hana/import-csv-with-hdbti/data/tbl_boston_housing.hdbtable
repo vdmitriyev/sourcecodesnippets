@@ -1,5 +1,5 @@
 table.schemaName = "<YOUR-NEO-SCHEMA-NAME>";
-table.tableType = COLUMNSTORE; 
+table.tableType = COLUMNSTORE;
 table.description = "Boston Housing Prices";
 
 table.columns = [

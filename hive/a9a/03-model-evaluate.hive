@@ -1,12 +1,12 @@
 create or replace view a9a_logreg_model01_eval as
-select 
-  t.label as actual, 
-  pd.label as predicted, 
+select
+  t.label as actual,
+  pd.label as predicted,
   pd.prob as probability
-from 
-  a9atest t JOIN a9a_logreg_model01_predict pd 
+from
+  a9atest t JOIN a9a_logreg_model01_predict pd
     on (t.rowid = pd.rowid);
-	
+
 SELECT count(1) / ${num_test_instances}
 FROM a9a_logreg_model01_eval
 WHERE actual == predicted;

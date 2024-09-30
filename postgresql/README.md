@@ -27,7 +27,7 @@ SELECT * FROM pgstatindex('idx_emails_tree')
 
 Get disk size by all databases
 ```sql
-select t1.datname AS db_name,  
+select t1.datname AS db_name,
        pg_size_pretty(pg_database_size(t1.datname)) as db_size
 from pg_database t1
 order by pg_database_size(t1.datname) desc;
@@ -47,9 +47,9 @@ from (
 		  pg_size_pretty(pg_relation_size(relid, 'init')) as relation_size_init,
 		  pg_size_pretty(pg_table_size(relid)) as table_size,
 		  pg_size_pretty(pg_total_relation_size(relid) - pg_relation_size(relid)) as external_size
-	 from 
+	 from
 		  pg_catalog.pg_statio_user_tables
-	 -- where 
+	 -- where
 	 --     schemaname = 'YYYY'
 	 -- and relname like 'YYYYY'
 	order by bytes_ desc

@@ -3,14 +3,21 @@ version: '3'
 vars:
   PACKAGE_NAME: "PACKAGE-NAME-HERE"
   PACKAGE_VERSION:
-    sh:
-        python -c "import importlib.metadata; print(importlib.metadata.version('{{.PACKAGE_NAME}}'))"
+    sh: |
+      python -c """
+      import importlib.metadata
+      try:
+        print(importlib.metadata.version('{{.PACKAGE_NAME}}'))
+      except ImportError:
+        print('0.0.0')
+      """
   VENV_DIR: ".venv"
 
-includes:
-  win: ./Taskfile_windows.yml
+#includes:
+#  win: ./Taskfile_windows.yml
 
 tasks:
+
   default:
     silent: true
     cmds:
@@ -30,12 +37,15 @@ tasks:
 
   clean-all:
     deps: [check-virtualenv]
+    run: once
+    silent: true
     cmds:
       - task: clean-build
       - task: clean-pyc
       - task: clean-test
 
   clean-build:
+    silent: true
     deps: [check-virtualenv]
     cmds:
       - echo "remove build artifacts"
@@ -45,6 +55,7 @@ tasks:
       - rm -fr {{.PACKAGE_NAME}}.egg-info
 
   clean-pyc:
+    silent: true
     deps: [check-virtualenv]
     cmds:
       - echo "remove Python file artifacts"
@@ -62,72 +73,113 @@ tasks:
       - rm -fr htmlcov/
       - rm -fr .pytest_cache
 
-  package-help:
+  version:
     deps: [check-virtualenv]
     cmds:
-      - echo 'package version {{.PACKAGE_VERSION}}' 
-      - python -m pymultissher --help
-      
+      - echo 'package version {{.PACKAGE_VERSION}}'
+      - python -m {{.PACKAGE_NAME}} --help
 
-  dev-install:
+  install:
     deps: [check-virtualenv]
     cmds:
       - pip install --editable .
       - python -c "import {{.PACKAGE_NAME}}"
 
-  dev-uninstall:
+  uninstall:
     deps: [check-virtualenv]
     cmds:
       - pip uninstall {{.PACKAGE_NAME}}
 
-  dev-pre-commit:
-    deps: [check-virtualenv]
-    cmds:
-      - pre-commit run --all-files
-
-  dev-tag-version:
-    deps: [check-virtualenv]
-    cmds:
-      - task: build
-      - echo  {{.PACKAGE_VERSION}}
-
-  dev-tag-create:
-    deps: [check-virtualenv]
-    cmds:
-      - task: build
-      - git tag {{.PACKAGE_VERSION}}
-      - task: dev-tag-describe
-
-  dev-tag-re-create:
-    deps: [check-virtualenv]
-    cmds:
-      - git tag -d {{.PACKAGE_VERSION}}
-      - task: dev-tag-create
-
-  dev-tag-describe:
-    deps: [check-virtualenv]
-    cmds:
-      - echo "git tags"
-      - git tag
-      - echo "latest git tags"
-      - git describe --tags --abbrev=0
-
-  dev-tag-push:
-    deps: [check-virtualenv]
-    cmds:
-        - git push --tags origin
-
   build:
+    silent: true
     deps: [check-virtualenv]
     cmds:
-      - echo "builds source and wheel package"
       - task: clean-build
+      - echo "builds source and wheel package"
       - py -m build
-      - ls -l dist
+      - echo "files in dist"
+      - ls -lh dist
 
   publish-test-pypi:
     deps: [check-virtualenv]
     cmds:
-      - echo "builds source and wheel package"
+      - echo "uploads to testpypi"
       - task: build
       - py -m twine upload --repository testpypi dist/*
+
+  git-tag-create:
+    silent: true
+    deps: [check-virtualenv]
+    cmds:
+      - task: build
+      - git tag {{.PACKAGE_VERSION}}
+      - echo "latest git tag"
+      - git describe --tags --abbrev=0
+
+  git-tag-re-create:
+    deps: [check-virtualenv]
+    cmds:
+      - git tag -d {{.PACKAGE_VERSION}}
+      - task: git-tag-create
+
+  git-tag-print:
+    silent: true
+    deps: [check-virtualenv]
+    cmds:
+      - echo "list of git tag"
+      - git tag
+      - echo "latest git tag"
+      - git describe --tags --abbrev=0
+
+  git-tag-push:
+    deps: [check-virtualenv]
+    cmds:
+        - git push --tags origin
+
+  pytest:
+    silent: true
+    deps: [check-virtualenv]
+    cmds:
+      - echo "running pytest"
+      - pytest
+
+  pytest-all:
+    silent: true
+    deps: [check-virtualenv]
+    cmds:
+      - echo "running pytest all"
+      - pytest
+      - pytest -m "with_docker"
+
+  pytest-verbose:
+    silent: true
+    deps: [check-virtualenv]
+    cmds:
+      - echo "running pytest"
+      - pytest -v -s
+
+  tox:
+    silent: true
+    deps: [check-virtualenv]
+    cmds:
+      - echo "running tox"
+      - tox
+
+  pre-commit-install:
+    deps: [check-virtualenv]
+    silent: true
+    cmds:
+      - pre-commit install
+
+  pre-commit-run:
+    deps: [check-virtualenv]
+    silent: true
+    cmds:
+      - pre-commit run --all-files
+
+  pre-commit-update:
+    deps: [check-virtualenv]
+    silent: true
+    cmds:
+      - pre-commit autoupdate
+      - pre-commit run --all-files

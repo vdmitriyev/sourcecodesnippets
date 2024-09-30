@@ -149,9 +149,14 @@ class DirectoryHelper:
         Generate file name
         """
 
-        rand_path_range = "".join(random.choice(string.ascii_lowercase + string.digits) for x in range(RAND_RANGE))
+        rand_path_range = "".join(
+            random.choice(string.ascii_lowercase + string.digits)
+            for x in range(RAND_RANGE)
+        )
         if name is None:
-            new_file_name = strftime("%Y-%m-%d", gmtime()) + "-" + rand_path_range + extention
+            new_file_name = (
+                strftime("%Y-%m-%d", gmtime()) + "-" + rand_path_range + extention
+            )
         else:
             new_file_name = name + "-" + rand_path_range + extention
 

@@ -1,10 +1,10 @@
 create or replace view a9a_logreg_model01_predict
 as
 select
-  t.rowid, 
+  t.rowid,
   sigmoid(sum(m.weight * t.value)) as prob,
   CAST((case when sigmoid(sum(m.weight * t.value)) >= 0.5 then 1.0 else 0.0 end) as FLOAT) as label
-from 
+from
   a9atest_exploded t LEFT OUTER JOIN
   a9a_logreg_model01 m ON (t.feature = m.feature)
 group by

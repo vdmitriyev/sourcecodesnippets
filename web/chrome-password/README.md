@@ -1,4 +1,4 @@
-### About 
+### About
 
 Scripts that extracts all services and password from the Chrome Browser.
 

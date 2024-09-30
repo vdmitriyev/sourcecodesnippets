@@ -18,7 +18,7 @@ function [config] = FuncReadJSONConfigs(configFileName)
 
     % parsing JSON
     parsedConfigs = parse_json(json);
-	
+
 	% converting JSON to struct
     config.airfoilName = 'TempName';
     hash = parsedConfigs{1};
@@ -33,4 +33,3 @@ function [config] = FuncReadJSONConfigs(configFileName)
         config = setfield (config, key, tempValue);
     end;
 end;
-

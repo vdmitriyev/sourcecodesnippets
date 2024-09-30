@@ -7,7 +7,7 @@ For i = 1 To n
     Dim s As Slide
     Set s = ActivePresentation.Slides(i)
     s.SlideShowTransition.Hidden = msoTrue
-    
+
     Dim max As Integer: max = 0
     For Each shp In s.Shapes
         If shp.AnimationSettings.Animate = msoTrue Then
@@ -22,7 +22,7 @@ For i = 1 To n
         Set s2 = s.Duplicate(1)
         s2.SlideShowTransition.Hidden = msoFalse
         s2.MoveTo ActivePresentation.Slides.Count
-        
+
         Dim i2 As Integer
         For i2 = s2.Shapes.Count To 1 Step -1
             With s2.Shapes(i2)

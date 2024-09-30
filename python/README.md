@@ -4,8 +4,8 @@ This is a collection of a various Python scripts and helper information.
 
 ## Scripts
 
-* [windows](windows)
-    - Script to create virtualenv from requirements.txt
+* [scripts](scripts)
+    - Script to create virtualenv from `requirements.txt`
     - Script to start and use virtualenv
 * [helpers](helpers)
     - `cmdUninstallGlobalPackages.bat` helps to uninstall globally installed pacakges
@@ -93,7 +93,7 @@ python3 -m json.tool myfile.json
 ## Date
 
 ```python
-from datetime import datetime 
+from datetime import datetime
 now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 # or
 now = datetime.now().strftime("%Y-%m-%d %H:%M[:%S[.%f]]")
@@ -136,7 +136,7 @@ def log_traceback(ex, ex_traceback=None):
                  traceback.format_exception(ex.__class__, ex, ex_traceback)]
     #logging.exception(tb_lines)
     print(tb_lines)
-try:         
+try:
     raise Exception('A test exception')
 except Exception as ex:
     _, _, ex_traceback = sys.exc_info()
@@ -174,16 +174,16 @@ pip config set global.require-virtualenv True
     + View sample config
         ```
         pre-commit sample-config
-        ``` 
+        ```
     + Create empty config file and copt sample config (`pre-commit sample-config`)
         ```
         touch .pre-commit-config.yaml
         ```
-    + Install the git hook scripts: 
+    + Install the git hook scripts:
         ```
         pre-commit install
         ```
-    + Run manually: 
+    + Run manually:
         ```
         pre-commit run --all-files
         ```
@@ -195,7 +195,7 @@ pip config set global.require-virtualenv True
         + Overview
             - https://pre-commit.com/hooks.html
         + Plugins
-            - https://github.com/psf/black 	
+            - https://github.com/psf/black
             - https://github.com/pypa/pip-audit
                 - Runs slow
 * `pre-commit` wroking example:

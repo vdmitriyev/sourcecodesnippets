@@ -1,5 +1,5 @@
-Option Explicit  
-Public Sub ChangeSpellCheckingLanguage()  
+Option Explicit
+Public Sub ChangeSpellCheckingLanguage()
     Dim j As Integer, k As Integer, scount As Integer, fcount As Integer
     scount = ActivePresentation.Slides.Count
     For j = 1 To scount

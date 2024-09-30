@@ -1,8 +1,8 @@
-### About 
+### About
 
 Collection of various SAP HANA scripts.
 
-### Privileges 
+### Privileges
 
 #### Granting Privileges for PAL
 
@@ -60,7 +60,7 @@ SELECT * from USERS where user_name like '%MASTER%';
 SELECT * from USERS where user_name = '<USER_NAME>';
 ```
 
-### Creting Schema 
+### Creting Schema
 
 ```sql
 CREATE SCHEMA <SCHEMA_NAME>;

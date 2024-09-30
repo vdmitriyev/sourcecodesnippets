@@ -21,7 +21,7 @@ To directly edit ```settings.json``` use in search pannel ```Preferences: Open U
 * **Todo Tree**
 * Go
     + templ-vscode
-    
+
 
 #### Docs/Options for the VS Code extensions
 
@@ -98,4 +98,3 @@ Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
     - **Ctrl + 1** -> focuces on editor
 * Switch between opened terminal in VS COde
    - **Ctrl + Shift + a** -> requires custom key bindings
- 

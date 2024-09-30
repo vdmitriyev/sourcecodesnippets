@@ -23,19 +23,19 @@ function [value json] = parse_value(json)
     if ~isempty(json)
         id = json(1);
         json(1) = [];
-        
+
         json = strtrim(json);
-        
+
         switch lower(id)
             case '"'
                 [value json] = parse_string(json);
-                
+
             case '{'
                 [value json] = parse_object(json);
-                
+
             case '['
                 [value json] = parse_array(json);
-                
+
             case 't'
                 value = true;
                 if (length(json) >= 3)
@@ -44,7 +44,7 @@ function [value json] = parse_value(json)
                     ME = MException('json:parse_value',['Invalid TRUE identifier: ' id json]);
                     ME.throw;
                 end
-                
+
             case 'f'
                 value = false;
                 if (length(json) >= 4)
@@ -53,7 +53,7 @@ function [value json] = parse_value(json)
                     ME = MException('json:parse_value',['Invalid FALSE identifier: ' id json]);
                     ME.throw;
                 end
-                
+
             case 'n'
                 value = [];
                 if (length(json) >= 3)
@@ -62,7 +62,7 @@ function [value json] = parse_value(json)
                     ME = MException('json:parse_value',['Invalid NULL identifier: ' id json]);
                     ME.throw;
                 end
-                
+
             otherwise
                 [value json] = parse_number([id json]); % Need to put the id back on the string
         end
@@ -76,15 +76,15 @@ function [data json] = parse_array(json)
             json(1) = [];
             return
         end
-        
+
         [value json] = parse_value(json);
-        
+
         if isempty(value)
             ME = MException('json:parse_array',['Parsed an empty value: ' json]);
             ME.throw;
         end
         data{end+1} = value; %#ok<AGROW>
-        
+
         while ~isempty(json) && ~isempty(regexp(json(1),'[\s,]','once'))
             json(1) = [];
         end
@@ -96,7 +96,7 @@ function [data json] = parse_object(json)
     while ~isempty(json)
         id = json(1);
         json(1) = [];
-        
+
         switch id
             case '"' % Start a name/value pair
                 [name value remaining_json] = parse_name_value(json);
@@ -106,10 +106,10 @@ function [data json] = parse_object(json)
                 end
                 data.(name) = value;
                 json = remaining_json;
-                
+
             case '}' % End of object, so exit the function
                 return
-                
+
             otherwise % Ignore other characters
         end
     end
@@ -120,7 +120,7 @@ function [name value json] = parse_name_value(json)
     value = [];
     if ~isempty(json)
         [name json] = parse_string(json);
-        
+
         % Skip spaces and the : separator
         while ~isempty(json) && ~isempty(regexp(json(1),'[\s:]','once'))
             json(1) = [];
@@ -134,7 +134,7 @@ function [string json] = parse_string(json)
     while ~isempty(json)
         letter = json(1);
         json(1) = [];
-        
+
         switch lower(letter)
             case '\' % Deal with escaped characters
                 if ~isempty(json)
@@ -158,10 +158,10 @@ function [string json] = parse_string(json)
                             new_char = [];
                     end
                 end
-                
+
             case '"' % Done with the string
                 return
-                
+
             otherwise
                 new_char = letter;
         end

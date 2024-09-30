@@ -5,7 +5,7 @@ REM @about Test checker that do following things:
 REM		1. Sets path variable
 REM		2. Compiles current solution
 REM		3. Iterates test sub folder by copying test files as an input for solution
-REM     4. Compare output of the solution with template output 
+REM     4. Compare output of the solution with template output
 
 set path=%PATH%;.;D:\Contests\compilers\cpp\bin\;D:\Contests\compilers\fpc\2.2.4\bin\i386-win32\;D:\Contests\compilers\Java\jdk1.6.0_19\bin\;
 if exist a.exe (del /F a.exe 2 > temp.temp)

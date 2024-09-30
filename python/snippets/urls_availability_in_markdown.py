@@ -144,11 +144,17 @@ def find_broken_links(html_page: str, debug: bool = False):
     broken_links = []
     with_href_tag = _find_href_elements(soup)
     if debug:
-        print(f"[i] with_href_tag\n\ttotal: {len(with_href_tag)}\n\turls: {with_href_tag}\n", flush=True)
+        print(
+            f"[i] with_href_tag\n\ttotal: {len(with_href_tag)}\n\turls: {with_href_tag}\n",
+            flush=True,
+        )
     broken_links.extend(_check_broken_links(with_href_tag))
     no_href_tag = _find_plain_elements(soup, search_text="https")
     if debug:
-        print(f"[i] no_href_tag\n\ttotal: {len(no_href_tag)}\n\turls: {no_href_tag}\n", flush=True)
+        print(
+            f"[i] no_href_tag\n\ttotal: {len(no_href_tag)}\n\turls: {no_href_tag}\n",
+            flush=True,
+        )
     broken_links.extend(_check_broken_links(no_href_tag))
 
     return broken_links
@@ -181,7 +187,9 @@ def check(url):
         if broken_links:
             click.echo("[i] broken links found:")
             for link in broken_links:
-                click.echo(click.style("=> ", fg="red") + f'{link["code"]}\t{link["url"]}')
+                click.echo(
+                    click.style("=> ", fg="red") + f'{link["code"]}\t{link["url"]}'
+                )
         else:
             click.echo("[i] no broken links found!")
     else:

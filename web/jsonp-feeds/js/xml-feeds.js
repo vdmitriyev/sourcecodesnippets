@@ -7,7 +7,7 @@ function displayXMLFeeds(){
 	document.getElementById("feedsXMLContent").innerHTML = globalXMLFeedsInHTML;
 }
 
-function buildHTMLLink(link, value){	
+function buildHTMLLink(link, value){
 	value = typeof value !== 'undefined' ? a : link;
 	htmlLink = '<a href=' + link + '>' + value + '</a>'
 	return htmlLink
@@ -16,7 +16,7 @@ function buildHTMLLink(link, value){
 function requesAndParseXML(){
 
 	try{
-	
+
 	} catch (err){
 			alert('Error while dealing with JSONP: ' + err)
 	}

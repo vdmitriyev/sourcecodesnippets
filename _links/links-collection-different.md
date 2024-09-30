@@ -144,4 +144,3 @@ Collection of links and materials grouped into various topics
 * [Набор иконок Material Design от Google](http://habrahabr.ru/post/241117/) #out-of-topic #хабр
     - [Material Design on Github](https://github.com/google/material-design-icons) #link #source #src
     - [Ico Moon.io](https://icomoon.io/app/#/select) #link #source
-

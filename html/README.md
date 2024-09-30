@@ -6,17 +6,17 @@ Interesting approaches/tools for CSS and HTML.
 
 ```css
 <style>
-* { 
-    border: 1px solid red; 
+* {
+    border: 1px solid red;
 }
 </style>
 ```
-or 
+or
 
 ```css
 <style>
-* { 
-    outline: 1px solid red; 
+* {
+    outline: 1px solid red;
 }
 </style>
 ```

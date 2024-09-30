@@ -5,15 +5,15 @@ set hivevar:total_steps=32561;
 select count(1) from a9atest;
 set hivevar:num_test_instances=16281;
 
-create table a9a_logreg_model01 
+create table a9a_logreg_model01
 as
-select 
+select
  cast(feature as int) as feature,
  avg(weight) as weight
-from 
- (select 
+from
+ (select
      logress(addBias(features),label,"-total_steps ${total_steps}") as (feature,weight)
-  from 
+  from
      a9atrain
- ) t 
+ ) t
 group by feature;

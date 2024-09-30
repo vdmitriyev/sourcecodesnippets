@@ -15,10 +15,7 @@ Interesting approaches/tools for Notepad++.
 
 ### Highlights for `go` in Dark Mode
 
-* File: 
+* File:
 	+ [go_simple_darkmode_monokai.xml](go_simple_darkmode_monokai.xml)
 * Installation:
-	+ Menu => Language -> "User Defined Language" -> "Define your language..." -> Import.  
-	
-
-
+	+ Menu => Language -> "User Defined Language" -> "Define your language..." -> Import.
