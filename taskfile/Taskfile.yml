@@ -38,6 +38,16 @@ tasks:
       - python -c "import sys; exit(1 if sys.prefix == sys.base_prefix else 0)"
       - python --version
 
+  activate-virtualenv:
+    desc: activates Python's virtualenv
+    aliases: [av, activate, activate-venv]
+    silent: true
+    run: once
+    cmds:
+      - echo "activating Python's virtualenv"
+      - echo ""
+      - scripts\\cmdStartEnvTF.bat
+
   clean-all:
     desc: cleans all
     deps: [check-virtualenv]
