@@ -27,7 +27,8 @@ tasks:
       - echo "Example usage-> 'task check-virtualenv'"
 
   check-virtualenv:
-    desc: checks Python virtualenv activation
+    desc: checks Python's virtualenv activation
+    aliases: [cv]
     silent: true
     run: once
     cmds:
@@ -120,8 +121,9 @@ tasks:
 
   git-tag-create:
     desc: creates a new git tag (uses version of "{{.PACKAGE_NAME}}")
-    silent: true
+    aliases: [gtc]
     deps: [check-virtualenv]
+    silent: true
     cmds:
       - task: build
       - git tag {{.PACKAGE_VERSION}}
@@ -130,6 +132,7 @@ tasks:
 
   git-tag-re-create:
     desc: re-creates a new git tag (uses version of "{{.PACKAGE_NAME}}")
+    aliases: [gtrc]
     deps: [check-virtualenv]
     cmds:
       - git tag -d {{.PACKAGE_VERSION}}
@@ -137,6 +140,7 @@ tasks:
 
   git-tag-print:
     desc: prints all git tags
+    aliases: [gtp]
     silent: true
     deps: [check-virtualenv]
     cmds:
@@ -146,6 +150,7 @@ tasks:
       - git describe --tags --abbrev=0
 
   git-tag-push:
+    aliases: [gtp]
     desc: pushes all git tags to remote
     deps: [check-virtualenv]
     cmds:
@@ -159,15 +164,6 @@ tasks:
       - echo "running pytest"
       - pytest
 
-  pytest-all:
-    desc: runs tests (all)
-    silent: true
-    deps: [check-virtualenv]
-    cmds:
-      - echo "running pytest all"
-      - pytest
-      - pytest -m "with_docker"
-
   pytest-verbose:
     desc: runs tests (verbose)
     silent: true
@@ -175,6 +171,14 @@ tasks:
     cmds:
       - echo "running pytest"
       - pytest -v -s
+
+  pytest-marker:
+    desc: runs tests (marker) (add after --)
+    silent: true
+    deps: [check-virtualenv]
+    cmds:
+      - echo "running pytest with marker"
+      - pytest -m {{.CLI_ARGS}}
 
   tox:
     desc: runs tox
@@ -186,6 +190,7 @@ tasks:
 
   pre-commit-install:
     desc: installs git hooks
+    aliases: [pci]
     deps: [check-virtualenv]
     silent: true
     cmds:
@@ -193,6 +198,7 @@ tasks:
 
   pre-commit-run:
     desc: runs installed git hooks
+    aliases: [pcr]
     deps: [check-virtualenv]
     silent: true
     cmds:
@@ -200,6 +206,7 @@ tasks:
 
   pre-commit-update:
     desc: updates git hooks
+    aliases: [pcu]
     deps: [check-virtualenv]
     silent: true
     cmds:
