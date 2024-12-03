@@ -2,6 +2,11 @@
 
 Collection of [Taskfile] used in different projects
 
+## Collection
+
+* Taskfile_git_tag.yml
+    - Commands to create and push `git tag` based on the commits history
+
 ## Taskfile
 
 * [Installation](https://taskfile.dev/installation/)

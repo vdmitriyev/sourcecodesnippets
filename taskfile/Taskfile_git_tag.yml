@@ -1,0 +1,63 @@
+version: '3'
+
+vars:
+  COMMIT_DATE:
+    sh: git log -1 --format=%ad --date=short
+  COMMIT_HASH:
+    sh: git log -1 --format="%h"
+  COMMITS_COUNTER:
+    sh: git rev-list --all --count
+  PACKAGE_VERSION: "{{.COMMIT_DATE}}_{{.COMMITS_COUNTER}}_{{.COMMIT_HASH}}"
+
+tasks:
+
+  default:
+    silent: true
+    cmds:
+      - task --list-all
+      - echo ""
+      - echo "Example usage-> 'task check-virtualenv'"
+
+  git-tag-create:
+    desc: creates a new git tag
+    aliases: [gtc]
+    silent: true
+    cmds:
+      - task: package-version
+      - git tag v{{.PACKAGE_VERSION}}
+      - echo "latest git tag"
+      - git describe --tags --abbrev=0
+
+  git-tag-re-create:
+    desc: re-creates a new git tag
+    aliases: [gtrc]
+    silent: true
+    cmds:
+      - git tag -d v{{.PACKAGE_VERSION}}
+      - task: git-tag-create
+
+  git-tag-show:
+    desc: shows all git tags
+    aliases: [gts]
+    silent: true
+    cmds:
+      - echo "List of git tags:"
+      - git tag
+      - echo ""
+      - echo "Latest git tag:"
+      - git describe --tags --abbrev=0
+
+  git-tag-push:
+    desc: pushes all git tags to remote
+    aliases: [gtp]
+    silent: true
+    cmds:
+        - git push --tags origin
+
+  package-version:
+    desc: shows current package version
+    aliases: [pv, version]
+    silent: true
+    cmds:
+      - echo "Current package version -> v{{.PACKAGE_VERSION}}"
+      - echo
