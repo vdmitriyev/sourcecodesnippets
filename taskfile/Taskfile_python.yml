@@ -191,6 +191,15 @@ tasks:
       - echo "running pytest with marker"
       - pytest -m {{.CLI_ARGS}}
 
+  bandit:
+    desc: runs bandit
+    aliases: []
+    deps: [check-virtualenv]
+    silent: true
+    cmds:
+      - echo "running bandit (static code analysis)"
+      - bandit -x "./.venv,./.tox,./tests" -r .
+
   tox:
     desc: runs tox
     silent: true

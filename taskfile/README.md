@@ -4,6 +4,8 @@ Collection of [Taskfile] used in different projects
 
 ## Collection
 
+* Taskfile_python.yml
+    - Used in Python projects
 * Taskfile_git_tag.yml
     - Commands to create and push `git tag` based on the commits history
 
