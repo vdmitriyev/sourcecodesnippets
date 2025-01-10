@@ -19,6 +19,9 @@ To directly edit ```settings.json``` use in search pannel ```Preferences: Open U
     + Markdown Preview Mermaid Support
 * YAML
 * **Todo Tree**
+* Themes
+    + GitHub Theme
+    + Monokai Pro
 * Go
     + templ-vscode
 
@@ -98,3 +101,10 @@ Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
     - **Ctrl + 1** -> focuces on editor
 * Switch between opened terminal in VS COde
    - **Ctrl + Shift + a** -> requires custom key bindings
+
+## VS Code: Theme
+
+Switch between themes as follows: 
+* Open `Command Palette`
+* Type `theme`
+* Select the one you want to write out
