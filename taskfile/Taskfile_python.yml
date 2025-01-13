@@ -200,6 +200,15 @@ tasks:
       - echo "running bandit (static code analysis)"
       - bandit -x "./.venv,./.tox,./tests" -r .
 
+  pylint:
+    desc: runs pylint
+    aliases: []
+    deps: [check-virtualenv]
+    silent: true
+    cmds:
+      - echo "running pylint (static code analysis)"
+      - pylint src
+
   tox:
     desc: runs tox
     silent: true

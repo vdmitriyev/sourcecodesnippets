@@ -2,22 +2,23 @@
 
 Collection of extensions and further tips for [VS Code](https://code.visualstudio.com/).
 
-To directly edit ```settings.json``` use in search pannel ```Preferences: Open User Settings (JSON)```. Details are in [VS Code: How to Add Custom Keybindings](#vs-code-how-to-add-custom-keybindings)
+To directly edit ```settings.json``` use in search panel ```Preferences: Open User Settings (JSON)```. Details are in [VS Code: How to Add Custom Keybindings](#vs-code-how-to-add-custom-keybindings)
 
 ## VS Code: Extensions
 
 #### Extensions that must to be installed for better development experience
 
-* Python, Pylance, IntelliCode, autoDocstring, Python Type Hint
+* IntelliCode
+* Python, Pylance, isort, Black Formatter, pylint, Python Type Hint
+* Better Comments, autoDocstring, Code Spell Checker
 * Remote Development, Dev Containers, Docker, Remote - SSH
-* Better Comments, isort, Black Formatter, Code Spell Checker
-* CodeSnap, DotENV, Rainbow CSV, indent-rainbow
+* CodeSnap, DotENV, Rainbow CSV
 * Jupyter, Jupyter Cell Tags, Jupyter Keymap, Jupyter Notebook Renderers, Jupyter Slide Show
 * LaTeX Workshop
 * **Markdown**
     + Markdown PDF
     + Markdown Preview Mermaid Support
-* YAML
+* YAML, Task
 * **Todo Tree**
 * Themes
     + GitHub Theme
@@ -104,7 +105,7 @@ Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
 
 ## VS Code: Theme
 
-Switch between themes as follows: 
+Switch between themes as follows:
 * Open `Command Palette`
 * Type `theme`
 * Select the one you want to write out
