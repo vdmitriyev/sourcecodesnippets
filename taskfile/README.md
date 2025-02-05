@@ -4,6 +4,8 @@ Collection of [Taskfile] used in different projects
 
 ## Collection
 
+* Taskfile.yml
+	- Combines multiple `taskfiles`
 * Taskfile_python.yml
     - Used in Python projects
 * Taskfile_git_tag.yml
