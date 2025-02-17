@@ -197,9 +197,14 @@ Fix issues with keys by editing ```nano ~/.zshrc```
     ```
     sudo chsh -s /usr/bin/fish
     ```
+* Modify `$PATH` for fish
+    ```
+    fish_add_path /usr/local/bin
+    ```
 * Materials
     - https://fishshell.com/docs/3.0/tutorial.html#:~:text=Switching%20to%20fish%3F,usr%2Flocal%2Fbin%2Ffish
     - https://dev.to/iqium/install-fish-shell-on-ubuntu-2204-3337
+    - https://fishshell.com/docs/current/tutorial.html#tut_startup
 
 ### Linux Utils
 
