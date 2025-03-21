@@ -104,7 +104,7 @@ Collection of various bash commands.
     ```
 * Configure ```ls```
     ```bash
-    alias ls='ls --time-style=long-iso --color=tty -Altr'
+    alias ls='ls --time-style=long-iso --color=tty -Altrh'
     ```
 * Color the grep-match for easy reading.
     ```bash
