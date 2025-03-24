@@ -15,6 +15,7 @@ vars:
 
 #includes:
 #  win: ./Taskfile_windows.yml
+#  git: /Taskfile_git_tag.yml
 
 tasks:
 
@@ -128,44 +129,6 @@ tasks:
       - echo "uploads to testpypi"
       - task: build
       - py -m twine upload --repository testpypi dist/*
-
-  git-tag-create:
-    desc: creates a new git tag (uses version of "{{.PACKAGE_NAME}}")
-    aliases: [gtc]
-    deps: [check-virtualenv]
-    silent: true
-    cmds:
-      - task: build
-      - git tag {{.PACKAGE_VERSION}}
-      - echo "latest git tag"
-      - git describe --tags --abbrev=0
-
-  git-tag-re-create:
-    desc: re-creates a new git tag (uses version of "{{.PACKAGE_NAME}}")
-    aliases: [gtrc]
-    deps: [check-virtualenv]
-    cmds:
-      - git tag -d {{.PACKAGE_VERSION}}
-      - task: git-tag-create
-
-  git-tag-show:
-    desc: shows all git tags
-    aliases: [gts]
-    deps: [check-virtualenv]
-    silent: true
-    cmds:
-      - echo "List of git tags:"
-      - git tag
-      - echo ""
-      - echo "Latest git tag:"
-      - git describe --tags --abbrev=0
-
-  git-tag-push:
-    aliases: [gtp]
-    desc: pushes all git tags to remote
-    deps: [check-virtualenv]
-    cmds:
-        - git push --tags origin
 
   pytest:
     desc: runs tests

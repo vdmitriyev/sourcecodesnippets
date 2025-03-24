@@ -3,4 +3,5 @@ version: '3'
 includes:
   py: ./Taskfile_python.yml
   git: ./Taskfile_git_tag.yml
+  pre-commit: ./Taskfile_pre_commit.yml
   win: ./Taskfile_windows.yml

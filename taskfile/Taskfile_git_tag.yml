@@ -8,6 +8,17 @@ vars:
   COMMITS_COUNTER:
     sh: git rev-list --all --count
   PACKAGE_VERSION: "{{.COMMIT_DATE}}_{{.COMMITS_COUNTER}}_{{.COMMIT_HASH}}"
+  # used to get exact version from Python package
+  # PACKAGE_NAME: "PACKAGE-NAME-HERE"
+  # PACKAGE_VERSION:
+  #   sh: |
+  #     python -c """
+  #     import importlib.metadata
+  #     try:
+  #       print(importlib.metadata.version('{{.PACKAGE_NAME}}'))
+  #     except ImportError:
+  #       print('0.0.0')
+  #     """
 
 tasks:
 
@@ -19,7 +30,7 @@ tasks:
       - echo "Example usage-> 'task check-virtualenv'"
 
   git-tag-create:
-    desc: creates a new git tag
+    desc: creates a new git tag (uses version of "{{.PACKAGE_NAME}}")
     aliases: [gtc]
     silent: true
     cmds:
@@ -29,7 +40,7 @@ tasks:
       - git describe --tags --abbrev=0
 
   git-tag-re-create:
-    desc: re-creates a new git tag
+    desc: re-creates a new git tag (uses version of "{{.PACKAGE_NAME}}")
     aliases: [gtrc]
     silent: true
     cmds:
