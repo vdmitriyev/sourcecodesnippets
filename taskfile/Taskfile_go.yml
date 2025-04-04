@@ -1,0 +1,49 @@
+version: '3'
+
+vars:
+  COMMIT_DATE:
+    sh: git log -1 --format=%ad --date=short
+  COMMIT_HASH:
+    sh: git log -1 --format="%h"
+  COMMITS_COUNTER:
+    sh: git rev-list --all --count
+  PACKAGE_BUILD: "{{.COMMIT_DATE}}_{{.COMMITS_COUNTER}}_{{.COMMIT_HASH}}"
+  CLI_FILE_NAME: CLINAME
+  EXE_FILE_NAME: "{{.CLI_FILE_NAME}}.exe"
+  RPI_FILE_NAME: "{{.CLI_FILE_NAME}}"
+
+tasks:
+
+  tidy:
+    desc: runs 'go mod tidy'
+    silent: true
+    aliases: [t]
+    run: once
+    cmds:
+      - go mod tidy
+
+  show-release-hash:
+    desc: show package release build hash
+    aliases: [srh]
+    silent: true
+    cmds:
+       - echo "Release (hash) -> {{.PACKAGE_BUILD}}"
+
+  make-release:
+    desc: makes release
+    aliases: [mr]
+    silent: true
+    cmds:
+      - go build -ldflags "-X main.build={{.PACKAGE_BUILD}}" -o {{.EXE_FILE_NAME}} .
+      - file {{.EXE_FILE_NAME}}
+
+  make-build:
+    desc: makes a build for `win` platform
+    aliases: [mb]
+    silent: true
+    cmds:
+      - echo "Building for Windows"
+      - task: version
+      - CGO_ENABLED=0 go build -a -tags netgo,osusergo -ldflags "-extldflags '-static' -s -w -X main.build={{.PACKAGE_BUILD}}" -o {{.EXE_FILE_NAME}} .
+      - echo "Checking generated file"
+      - file {{.EXE_FILE_NAME}}
