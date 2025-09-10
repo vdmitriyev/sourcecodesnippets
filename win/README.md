@@ -1,6 +1,13 @@
-### Command Lines
+## Command Lines
 
-### How to see which process binds a particular port
+## Hot keys
+
+* To move a full-screen application to another monitor using a hotkey on Windows (e.g., to the left)
+	```
+ 	Windows + Shift + Left Arrow
+	```
+
+## How to see which process binds a particular port
 
 * Approach
    ```
@@ -13,7 +20,7 @@
    tasklist | findstr 1234
    ```
 
-### How to uses aliases on Windows
+## How to uses aliases on Windows
 
 Initial ideas are from [stackoverflow](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)
 
@@ -27,7 +34,9 @@ Initial ideas are from [stackoverflow](https://stackoverflow.com/questions/20530
    ```
 * Copy bat files from [.aliases](.aliases) to the newly created directory
 
-### On using `make` on Windows
+## On using `make` on Windows
+
+Instead of `make` use [taskfiles](https://taskfile.dev/)
 
 * It is generally possible to use make with [MSYS2](https://github.com/vdmitriyev/learn-golang#gcc-minwg-etc-on-windows)
 * How to `start` `bash-terminal` after MSYS2 installation into ```C:\\Compilers\msys64\\```
@@ -37,13 +46,13 @@ Initial ideas are from [stackoverflow](https://stackoverflow.com/questions/20530
 * However, `make` will not work properly on Windows host (many workaround required)
 * Alternative: use [taskfile](https://taskfile.dev/) to create make-like tasks using YML
 
-### SSH on Windows
+## SSH on Windows
 
 * Main tools: Putty, WinSCP, MobaXTerm
 * PuTTY Color Themes - https://github.com/AlexAkulov/putty-color-themes/tree/master
 * (multitabs, did not use): SuperPuTTy - https://github.com/jimradford/superputty
 
-### Interesting and useful articles and ideas
+## Interesting and useful articles and ideas
 
 * [It's time for you to install Windows Terminal](https://www.hanselman.com/blog/its-time-for-you-to-install-windows-terminal)
    - Edit own "settings"file
