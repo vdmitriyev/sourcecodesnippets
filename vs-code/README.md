@@ -26,7 +26,6 @@ To directly edit ```settings.json``` use in search panel ```Preferences: Open Us
 * Go
     + templ-vscode
 
-
 #### Docs/Options for the VS Code extensions
 
 * [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
@@ -44,6 +43,20 @@ To directly edit ```settings.json``` use in search panel ```Preferences: Open Us
 * [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 * [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
     - [Best way to work with TODOs in VSCode](https://thomasventurini.com/articles/the-best-way-to-work-with-todos-in-vscode/)
+* [LaTeX in VS Code](https://paulwintz.com/latex-in-vscode/)
+
+
+## VS Code: Keyboard Shortcuts / Keybindings
+
+* Toggle sidebar visibility / hide explorer:
+    - **Ctrl+B**
+* Switch focus between editor and terminal:
+    - **Ctrl + \`** -> focuces on terminal (*\`* -> backtick key)
+    - **Ctrl + 1** -> focuces on editor
+* Switch between opened terminal in VS Code
+   - **Ctrl + Shift + a** -> requires custom key bindings
+* Got to file:
+* 	- **Ctrl + P**
 
 ## VS Code: How to debug a Python module
 
@@ -92,16 +105,6 @@ Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
     },
 }
 ```
-
-## VS Code: Keyboard Shortcuts / Keybindings
-
-* Toggle sidebar visibility / hide explorer:
-    - **Ctrl+B**
-* Switch focus between editor and terminal:
-    - **Ctrl + \`** -> focuces on terminal (*\`* -> backtick key)
-    - **Ctrl + 1** -> focuces on editor
-* Switch between opened terminal in VS COde
-   - **Ctrl + Shift + a** -> requires custom key bindings
 
 ## VS Code: Theme
 
