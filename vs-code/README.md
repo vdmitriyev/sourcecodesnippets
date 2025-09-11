@@ -55,8 +55,10 @@ To directly edit ```settings.json``` use in search panel ```Preferences: Open Us
     - **Ctrl + 1** -> focuces on editor
 * Switch between opened terminal in VS Code
    - **Ctrl + Shift + a** -> requires custom key bindings
-* Got to file:
-* 	- **Ctrl + P**
+* Got to file within the project
+   - **Ctrl + P**
+* Navigate between open files
+   - Hold **Ctr** and press **Tab**
 
 ## VS Code: How to debug a Python module
 
