@@ -45,6 +45,11 @@ To directly edit ```settings.json``` use in search panel ```Preferences: Open Us
     - [Best way to work with TODOs in VSCode](https://thomasventurini.com/articles/the-best-way-to-work-with-todos-in-vscode/)
 * [LaTeX in VS Code](https://paulwintz.com/latex-in-vscode/)
 
+## VS Code: Additional values for ```settings.json```
+
+```json
+"telemetry.telemetryLevel": "off",
+```
 
 ## VS Code: Keyboard Shortcuts / Keybindings
 
