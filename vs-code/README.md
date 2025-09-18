@@ -65,24 +65,6 @@ To directly edit ```settings.json``` use in search panel ```Preferences: Open Us
 * Navigate between open files
    - Hold **Ctr** and press **Tab**
 
-## VS Code: How to debug a Python module
-
-Example of the ```launch.json``` to debug module (see sections: ```args```, ```msconsconverter```)
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Python Debugger: Module",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "msconsconverter",
-            "args": ["convert", "--debug", "--input-directory", "tests/data", "--output-directory", "tests/data/output"],
-        }
-    ]
-}
-```
-
 ## VS Code: How to Add Custom Keybindings
 
 Open and edit ```Preferences: Open Keyboard Shortcuts (JSON)``` by addding
@@ -119,3 +101,21 @@ Switch between themes as follows:
 * Open `Command Palette`
 * Type `theme`
 * Select the one you want to write out
+
+## VS Code: How to debug a Python module
+
+Example of the ```launch.json``` to debug module (see sections: ```args```, ```msconsconverter```)
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "msconsconverter",
+            "args": ["convert", "--debug", "--input-directory", "tests/data", "--output-directory", "tests/data/output"],
+        }
+    ]
+}
+```
