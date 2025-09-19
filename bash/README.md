@@ -215,6 +215,7 @@ Fix issues with keys by editing ```nano ~/.zshrc```
     set -U fish_color_command cyan
     set -U fish_color_error red --bold
     set -U fish_color_option brmagenta --bold
+    set -U fish_color_valid_path yellow --bold
     ```
 * Materials
     - https://fishshell.com/docs/3.0/tutorial.html#:~:text=Switching%20to%20fish%3F,usr%2Flocal%2Fbin%2Ffish
