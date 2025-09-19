@@ -210,6 +210,12 @@ Fix issues with keys by editing ```nano ~/.zshrc```
     alias ls='ls --time-style=long-iso --color=tty -Altrh'
     funcsave ls
     ```
+* Issue with colors in Putty
+    ```
+    set -U fish_color_command cyan
+    set -U fish_color_error red --bold
+    set -U fish_color_option brmagenta --bold
+    ```
 * Materials
     - https://fishshell.com/docs/3.0/tutorial.html#:~:text=Switching%20to%20fish%3F,usr%2Flocal%2Fbin%2Ffish
     - https://dev.to/iqium/install-fish-shell-on-ubuntu-2204-3337
