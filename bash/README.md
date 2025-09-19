@@ -62,6 +62,10 @@ Collection of various bash commands.
     sudo df -h
     ```
 * Determine the space available on the disks (**du**)
+    + Size on disk (all folders, sorted high -> low)
+        ```
+        sudo du -hsc .* * | sort -rh
+        ```
     + Size on disk
         ```
         sudo du -hsc *
@@ -76,7 +80,7 @@ Collection of various bash commands.
         ```
     + Sort output
         ```
-        sudo du -h | sort -h
+        sudo du -h | sort -rh
         ```
 * Information about disks
     ```
