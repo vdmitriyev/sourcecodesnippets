@@ -125,14 +125,17 @@ Collection of various bash commands.
     ```
     <your_secret_command>; history -d $((HISTCMD-1))
     ```
-
 * Execute a command without keeping it in history (can start your session with)
     ```
     export HISTFILE=/dev/null ;history -d $(history 1)
     ```
-
+* Add timestamp to bash commands (check by calling `history`)
+    ```
+    echo 'export HISTTIMEFORMAT="%F %T "' >> ~/.bashrc
+    ```
 * Relevant articles
     - Execute a command without keeping it in history
+    - 
 
 ### Troubleshoot network connection
 
