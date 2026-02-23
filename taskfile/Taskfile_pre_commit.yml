@@ -1,5 +1,8 @@
 version: '3'
 
+vars:
+  VENV_DIR: ".venv"
+
 tasks:
 
   check-virtualenv:
@@ -14,7 +17,7 @@ tasks:
       - python -c "import sys; exit(1 if sys.prefix == sys.base_prefix else 0)"
       - python --version
 
-  pre-commit-install:
+  install:
     desc: installs git hooks
     aliases: [pci]
     deps: [check-virtualenv]
@@ -22,7 +25,7 @@ tasks:
     cmds:
       - pre-commit install
 
-  pre-commit-run:
+  run:
     desc: runs installed git hooks
     aliases: [pcr]
     deps: [check-virtualenv]
@@ -30,7 +33,7 @@ tasks:
     cmds:
       - pre-commit run --all-files
 
-  pre-commit-update:
+  update:
     desc: updates git hooks
     aliases: [pcu]
     deps: [check-virtualenv]
