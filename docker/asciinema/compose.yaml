@@ -1,0 +1,10 @@
+services:
+
+   asciinema-tools:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name:  asciinema-tools
+    volumes:
+      - ./:/app
+    restart: "unless-stopped"

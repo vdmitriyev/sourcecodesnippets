@@ -3,12 +3,12 @@ services:
   go-cli-bundle:
     build:
       context: .
-      dockerfile: Dockerfile-go.yml
+      dockerfile: Dockerfile
     tty: true
     stdin_open: true
     environment:
       - TERM=xterm
     volumes:
-      - ./data-go:/app # Replace with the actual path on your host machine
+      - ./data:/app # Replace with the actual path on your host machine
     working_dir: /app
     command: /bin/bash
