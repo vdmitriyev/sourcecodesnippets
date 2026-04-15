@@ -8,7 +8,7 @@ To directly edit ```settings.json``` use in search panel ```Preferences: Open Us
 
 #### Extensions that must to be installed for better development experience
 
-* IntelliCode
+* ~IntelliCode~
 * Python, Pylance, isort, Black Formatter, pylint, Python Type Hint
 * Better Comments, autoDocstring, Code Spell Checker
 * Remote Development, Dev Containers, Docker, Remote - SSH
