@@ -4,7 +4,7 @@ Collection of `docker compose` files for various needs.
 
 ## asciinema
 
-[asciinema]https://docs.asciinema.org/getting-started/)
+[asciinema](https://docs.asciinema.org/getting-started/)
 
 
 * To make screencast inside docker, install it inside the image by adding following link and rebuilding:
@@ -16,7 +16,10 @@ Collection of `docker compose` files for various needs.
     ```
     docker run --rm -it -v ".:/app" -w /app ghcr.io/asciinema/asciinema play demo.cast
     ```
-
+* Requires `task build` means:
+    ```
+    cd asciinema && task build
+    ```
 * Play demo using Docker (requires `task build`):
     ```
     docker run --rm -it -v ".:/app" -w /app --entrypoint bash asciinema-asciinema-tools asciinema play demo.cast
