@@ -221,6 +221,16 @@ Fix issues with keys by editing ```nano ~/.zshrc```
     set -U fish_color_option brmagenta --bold
     set -U fish_color_param magenta --bold
     ```
+* Issues with `tmux` (feature detection produces garbage symbols) - edit config `nano ~/.config/fish/config.fish`
+    ```
+    # Prevent fish from sending device attribute queries inside tmux
+    if set -q TMUX
+        function __fish_winch_handler --on-signal WINCH
+            # Override default handler to stop background queries
+        end
+        set -g fish_handle_background_titles 0
+    end
+    ```
 * Materials
     - https://fishshell.com/docs/3.0/tutorial.html#:~:text=Switching%20to%20fish%3F,usr%2Flocal%2Fbin%2Ffish
     - https://dev.to/iqium/install-fish-shell-on-ubuntu-2204-3337
