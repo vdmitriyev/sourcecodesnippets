@@ -15,6 +15,7 @@ Own collection of source code code snippets for various programming languages. S
 * [latex](latex)
 * [octave](octave)
 * [postgresql](postgresql)
+* [powershell](powershell)
 * [python](python)
 * [sublime](sublime)
 * [totalcmd](totalcmd)
