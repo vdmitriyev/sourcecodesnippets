@@ -231,6 +231,19 @@ Fix issues with keys by editing ```nano ~/.zshrc```
         set -g fish_handle_background_titles 0
     end
     ```
+* Issues with SSID
+    - Make sure the location
+        ```
+        echo "/usr/bin/fish" | sudo tee -a /etc/shells
+        ```
+    - Set the fish for SSID sessions
+        ```
+        sudo sss_override user-add <username> -s /usr/bin/fish
+        ```
+    - Restart the session
+        ```
+        sudo systemctl restart sssd
+        ```
 * Materials
     - https://fishshell.com/docs/3.0/tutorial.html#:~:text=Switching%20to%20fish%3F,usr%2Flocal%2Fbin%2Ffish
     - https://dev.to/iqium/install-fish-shell-on-ubuntu-2204-3337
