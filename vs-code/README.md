@@ -119,3 +119,9 @@ Example of the ```launch.json``` to debug module (see sections: ```args```, ```m
     ]
 }
 ```
+
+## VS Code: Connect via SSH and open particular folder
+
+```
+code --remote ssh-remote+SSH-CONFIG-NAME /path/to/folder
+```
