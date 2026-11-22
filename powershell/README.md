@@ -2,6 +2,13 @@
 
 List of commands for powershell
 
+## Hints
+
+* Adding a custom methods to $PROFILE of powershell by using
+    ```
+    notepad $PROFILE
+    ```
+    
 ## Hosts in SSH config
 
 * List all hosts in the `.ssh/config` file
@@ -24,13 +31,44 @@ List of commands for powershell
     sshlist | grep jump
     ```
 
-## Hints
+## Search in all history
 
-* Adding a custom method to $PROFILE of powershell
-    ```
-    notepad $PROFILE
-    ```
+* Search history commands
+```
+function search-history-all {
+    param(
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]]$Patterns
+    )
 
+    $results = Get-Content (Get-PSReadLineOption).HistorySavePath | Select-Object -Unique
+
+    foreach ($pattern in $Patterns) {
+        $results = $results | Where-Object { $_ -match $pattern }
+    }
+
+    if ($Patterns.Count -gt 0) {
+        $e = [char]27
+        $combinedPattern = ($Patterns | ForEach-Object { "($_)" }) -join '|'
+        $results = $results | ForEach-Object {
+            $_ -replace $combinedPattern, "$e[1;32m`$0$e[0m"
+        }
+    }
+
+    $results
+}
+
+# Optional: creates aliases
+Set-Alias -Name histall -Value search-history-all
+Set-Alias -Name historyall -Value search-history-all
+Set-Alias -Name searchhist -Value search-history-all
+Set-Alias -Name searchhistory -Value search-history-all
+```
+* Use it
+    ```
+    searchhistory code
+    ```
+    
 ## git: aliases
 
 * Create a shorter alias name for the function (e.g., 'ggc')
