@@ -68,7 +68,19 @@ Set-Alias -Name searchhistory -Value search-history-all
     ```
     searchhistory code
     ```
-    
+
+### Built-In Autocomplete Setup
+
+* Built-In autocomplete setup (no further install needed)
+    ```
+    # Search command history based on what you have already typed
+    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+    # Show an interactive menu of matching commands/files when pressing Tab
+    Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+    ```
+
 ## git: aliases
 
 * Create a shorter alias name for the function (e.g., 'ggc')
